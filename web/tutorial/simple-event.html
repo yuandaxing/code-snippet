@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+          "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Event Test</title>
+    <script type="text/javascript">
+      now = new Date();
+      localtime = now.toString();
+      utctime = now.toGMTString();
+      document.write("<strong>local time:</strong> " + localtime + "<br />");
+      document.write("<string> utc time: </string>" + utctime + "<br />");
+      hours = now.getHours();
+      mins = now.getMinutes();
+      secs = now.getSeconds();
+      document.write("<h1>");
+      document.write(hours + ":" + mins + ":" + secs);
+      document.write("</h1>");
+    </script>
+  </head>
+  <body>
+    <h1>Event Test</h1>
+    <button type="button"
+            onclick="alert('You clicked the button.')">
+      Click Me!</button>
+  </body>
+</html>
