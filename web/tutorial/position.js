@@ -1,8 +1,8 @@
 var x=100,y=150;
 function pos(dx,dy) {
     if (!document.getElementById) return;
-    x += 10*dx;
-    y += 10*dy;
+    x += 100*dx;
+    y += 100*dy;
     obj = document.getElementById("square");
     obj.style.top=y + "px";
     obj.style.left=x + "px";
