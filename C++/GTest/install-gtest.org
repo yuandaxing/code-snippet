@@ -1,0 +1,19 @@
+* install
+
+** get the source
+   wget http://googletest.googlecode.com/files/gtest-1.7.0.zip
+
+
+** compile
+   unzip gtest-1.7.0.zip
+   cd gtest-1.7.0
+   ./configure
+   make
+
+** set environment
+   sudo cp -a include/gtest /usr/include
+   sudo cp -a lib/.libs/* /usr/lib/
+   sudo ldconfig -v | grep gtest
+   - below ouput indicate the success
+     libgtest.so.0 -> libgtest.so.0.0.0
+     libgtest_main.so.0 -> libgtest_main.so.0.0.0
