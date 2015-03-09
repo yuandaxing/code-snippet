@@ -1,0 +1,11 @@
+* httpd to inspect
+
+** install
+   download the source code
+   make
+   sudo make install
+   ldconfig
+      ubuntu do not update the lib idx
+
+** compile
+   g++ httpdemon.cpp -o hellobrowser.exe -lmicrohttpd
