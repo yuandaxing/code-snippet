@@ -25,7 +25,7 @@ namespace MicroAd
       return Serv::instance_;
     }
 
-    int Serv::Start(uint16_t port, std::share_ptr<IHttpRequestProcess> *hrp)
+    int Serv::Start(uint16_t port, std::share_ptr<IHttpRequestProcessor> hrp)
     {
       if(NULL == hrp) return -1;
 

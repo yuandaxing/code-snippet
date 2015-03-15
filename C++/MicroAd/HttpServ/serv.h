@@ -11,25 +11,25 @@ namespace MicroAd
 {
   namespace Utils
   {
-    class IHttpRequestProcess
+    class IHttpRequestProcessor
     {
     public:
       virtual int Process(const char* url, struct MHD_Connection* conn, std::string& result) = 0;
-      virtual ~IHttpRequestProcess(){};
+      virtual ~IHttpRequestProcessoror(){};
     };
 
     class Serv
     {
     public:
       static Serv* Instance();
-      int Start(uint16_t port = 8000, std::share_ptr<IHttpRequestProcess> hrp);
+      int Start(uint16_t port = 8000, std::share_ptr<IHttpRequestProcessor> hrp);
       void Stop();
 
     private:
       static Serv* instance_;
       static pthread_mutex_t lock_;
       struct MHD_Daemon* daemon_;
-      std::share_ptr<IHttpRequestProcess> requestPtr_;
+      std::share_ptr<IHttpRequestProcessor> requestPtr_;
 
       Serv():daemon_(NULL){}
       static int HttpCallback(void* cls, struct MHD_Connection* connection,
@@ -42,6 +42,4 @@ namespace MicroAd
     };
   }
 }
-
-
 #endif
