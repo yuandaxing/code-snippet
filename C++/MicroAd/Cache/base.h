@@ -13,20 +13,32 @@ public:
   typedef typename T_ key_t;
   typedef typename v_ val_t;
   typedef size_t type_size;
-  //empty, release, operator*(), operator->(),
-  typedef typename HASHMAP::accessor Accessor;
 
-  bool Find(Accessor& result, const key_t& key);
+  bool Get(const key_t& key, val_t& val)
+  {
+    Accessor accessor;
+    if(hashmap_.find(accessor, key))
+    {
+      val = accessor->second;
+      return true;
+    }
+    return false;
+  }
+
   bool Erase(const key_t& key);
-  bool Erase(const Accessor& accessor);
+  {
+    hashmap_.erase(key);
+  }
+  bool Set(const key_t& key, const val_t val)
+
   bool Size(){ return hashmap_.size(); }
 
 private:
   //no copy
   CacheBase(const CaseBase&);
   void operator=(const CaseBase&);
-
   typedef tbb::concurrent_hash_map<T_, V_> HASHMAP;
+  typedef typename HASHMAP::accessor Accessor;
   HASHMAP hashmap_;
 }
 }
