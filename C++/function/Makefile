@@ -7,9 +7,8 @@ AR      =ar
 
 CFLAGS =  -g -Wall -DMUTEX -DDEBUG -fno-strict-aliasing -std=c++11
 CFLAGS += -I./
-LDFLAGS = -lmicrohttpd -lpthread
-SRCS =  serv.cc serv_ut.cc request_mgr.cc
-OBJS := $(SRCS:.cc=.o)
+SRCS =  test.cpp
+OBJS := $(SRCS:.cpp=.o)
 
 EXECUT_TAGS := test.exe
 
@@ -19,11 +18,11 @@ all:$(EXECUT_TAGS) $(OBJS)
 ${EXECUT_TAGS}:${OBJS}
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-$(OBJS):%.o:%.cc
+$(OBJS):%.o:%.cpp
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 .SUFFIXES:
-.SUFFIXES: .cc .o
+.SUFFIXES: .cpp .o
 
 .PHONY:clean
 clean:
