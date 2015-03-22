@@ -1,6 +1,21 @@
 // bind example
 #include <iostream>     // std::cout
 #include <functional>   // std::bind
+std::function<int(int, int)> gfunctor;
+struct A
+{
+  int sum(int i, int j)
+  {
+    return i+j;
+  }
+  int callSum(int i, int j)
+  {
+    using namespace std::placeholders;
+    std::function<int(int, int)> call = std::bind(&A::sum, this, _1, _2);
+    gfunctor = call;
+    return call(i, j);
+  }
+};
 
 // a function: (also works with function object: std::divides<double> my_divide;)
 double my_divide (double x, double y) {return x/y;}
@@ -9,7 +24,6 @@ struct MyPair {
   double a,b;
   double multiply() {return a*b;}
 };
-
 int main () {
   using namespace std::placeholders;    // adds visibility of _1, _2, _3,...
 
@@ -18,6 +32,7 @@ int main () {
   std::cout << fn_five() << '\n';                          // 5
 
   auto fn_half = std::bind (my_divide,_1,2);               // returns x/2
+
   std::cout << fn_half(10) << '\n';                        // 5
 
   auto fn_invert = std::bind (my_divide,_2,_1);            // returns y/x
@@ -35,5 +50,8 @@ int main () {
   auto bound_member_data = std::bind (&MyPair::a,ten_two); // returns ten_two.a
   std::cout << bound_member_data() << '\n';                // 10
 
+  A a;
+  std::cout << a.callSum(10, 20) << std::endl;
+  std::cout << gfunctor(10, 11) << std::endl;
   return 0;
 }
