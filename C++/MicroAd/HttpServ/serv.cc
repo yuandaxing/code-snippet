@@ -8,7 +8,6 @@ namespace Utils
 {
 Serv* Serv::instance_ = NULL;
 pthread_mutex_t Serv::lock_ = PTHREAD_MUTEX_INITIALIZER;
-
 Serv* Serv::Instance()
 {
   if(NULL == Serv::instance_)

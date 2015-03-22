@@ -24,47 +24,26 @@ struct ParamInfo
 class ParamRepository
 {
 public:
-  int32_t CreateInt32(const char* name, const char* val, const char* desc, bool alter, void* ptr)
-  {
-    ParamInfo pi(INT32_T, name, desc, alter, ptr);
-    
-  }
-  int64_t CreateInt64(const char* name, const char* val, const char* desc, bool alter, void* ptr)
-  {
-    
-  }
+  static ParamRepository* Instance();
+  int32_t CreateInt32(const char* name, const char* val, const char* desc, bool alter, void* ptr);
+  int64_t CreateInt64(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   std::string CreateString(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   bool CreateBool(const char* name, const char* val, const char* desc, bool alter, void* ptr);
-  bool SetValue(const char* name, const char* val)
-  {
-    std::string key(name);
-    if(paramPool_.find(name) != paramPool_.end())
-    {
-      ParamInfo& pi = paramPool_[name];
-      if(BOOL_T == pi.paramType_)
-      {
-        bool val = true;
-        
-      } else if(STRING_T == pi.paramType_)
-      {
-
-      }else if(INT32_T == pi.paramType_)
-      {
-
-      }else if(INT64_T == pi.paramType_)
-      {
-      }
-      return false;
-    }
-    return false;
-  }
-
+  bool SetValue(const char* name, const char* val, const ValSrc vs);
 private:
+  ParamRepository(){}
+  ParamRepository(const ParamRepository&);
+  void operator=(const ParamRepository&);
   std::unordered_map<std::string, ParamInfo> paramPool_;
-  pthread_mutex_t lock_;
-  static ParamRepository instance_;
-  
+  static pthread_mutex_t lock_;
+  static ParamRepository* instance_;
 };
+#define DECLARE_INT32(name) extern int32_t name;
+#define DEFINE_INT32(name, value, alterable, desc) \
+  int32_t name = ParamRepository::Instance()->CreateInt32(#name, value, desc, alterable, &name);
+#define INT32_PARAM(name) name
+
+
 }
 }
 #endif
