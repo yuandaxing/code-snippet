@@ -1,4 +1,5 @@
 #include <param_repository.h>
+#include <ad_common.h>
 namespace MicroAd
 {
 namespace Utils
@@ -8,6 +9,7 @@ ParamRepository* ParamRepository::instance_ = NULL;
 int32_t ParamRepository::CreateInt32(const char* name, const char* val, 
                                      const char* desc, bool alter, void* ptr)
 {
+  MutexGuard guard(&ParamRepository::lock_);
   ParamInfo pi(INT32_T, name, desc, alter, ptr);
   std::string key(name);
   paramPool_[key] = pi;
@@ -16,6 +18,7 @@ int32_t ParamRepository::CreateInt32(const char* name, const char* val,
 int64_t ParamRepository::CreateInt64(const char* name, const char* val, const char* desc,
                                      bool alter, void* ptr)
 {
+  MutexGuard guard(&ParamRepository::lock_);
   ParamInfo pi(INT64_T, name, desc, alter, ptr);
   std::string key(name);
   paramPool_[key] = pi;
@@ -24,13 +27,16 @@ int64_t ParamRepository::CreateInt64(const char* name, const char* val, const ch
 std::string ParamRepository::CreateString(const char* name, const char* val,
                                           const char* desc, bool alter, void* ptr)
 {
+  MutexGuard guard(&ParamRepository::lock_);
   ParamInfo pi(STRING_T, name, desc, alter, ptr);
   std::string key(name);
   paramPool_[key] = pi;
   return std::string(val);
 }
-bool ParamRepository::CreateBool(const char* name, const char* val, const char* desc, bool alter, void* ptr)
+bool ParamRepository::CreateBool(const char* name, const char* val, const char* desc,
+                                 bool alter, void* ptr)
 {
+  MutexGuard guard(&ParamRepository::lock_);
   ParamInfo pi(BOOL_T, name, desc, alter, ptr);
   std::string key(name);
   paramPool_[key] = pi;
@@ -40,6 +46,7 @@ bool ParamRepository::CreateBool(const char* name, const char* val, const char* 
 bool ParamRepository::SetValue(const char* name, const char* val, const ValSrc vs)
 {
   std::string key(name);
+  MutexGuard guard(&ParamRepository::lock_);
   if(paramPool_.find(name) != paramPool_.end())
   {
     ParamInfo& pi = paramPool_[name];

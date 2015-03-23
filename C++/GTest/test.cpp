@@ -48,7 +48,5 @@ int main (int argc, char** argv) {
     //Do Your teardown here if required
     //
     //
-    for(int i = 0; i < 3; i++)
-
     return returnValue;
 }

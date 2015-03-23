@@ -10,11 +10,20 @@ template<typename T_, typename V_>
 class CacheBase
 {
 public:
-  typedef typename T_ key_t;
-  typedef typename v_ val_t;
+  typedef T_ key_t;
+  typedef V_ val_t;
   typedef size_t type_size;
+  CacheBase(): hashmap_() { }
 
-  bool Get(const key_t& key, val_t& val)
+  bool Set(const key_t& key, const val_t& val)
+  {
+    Accessor accessor;
+    bool newItem = hashmap_.insert(accessor, key);
+    accessor->second = val;
+    return newItem;
+  }
+
+  bool Get(const key_t& key, val_t& val) const
   {
     Accessor accessor;
     if(hashmap_.find(accessor, key))
@@ -25,22 +34,22 @@ public:
     return false;
   }
 
-  bool Erase(const key_t& key);
+  bool Erase(const key_t& key)
   {
-    hashmap_.erase(key);
+    return hashmap_.erase(key);
   }
-  bool Set(const key_t& key, const val_t val)
+  //insert all the way, true is new, else old
 
-  bool Size(){ return hashmap_.size(); }
+  type_size Size() const { return hashmap_.size(); }
 
 private:
   //no copy
-  CacheBase(const CaseBase&);
-  void operator=(const CaseBase&);
+  CacheBase(const CacheBase&);
+  void operator=(const CacheBase&);
   typedef tbb::concurrent_hash_map<T_, V_> HASHMAP;
   typedef typename HASHMAP::accessor Accessor;
   HASHMAP hashmap_;
-}
+};
 }
 }
 #endif
