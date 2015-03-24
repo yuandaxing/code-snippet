@@ -39,7 +39,7 @@ private:
   static ParamRepository* instance_;
 };
 
-#define DECLARE_INT32(name) extern int32_t name;
+#define DECLARE_INT32(name) extern int32_t name
 #define DEFINE_INT32(name, value, alterable, desc) \
   int32_t name = ParamRepository::Instance()->CreateInt32(#name, value, desc, alterable, &name);
 #define INT32_PARAM(name) name
@@ -47,14 +47,14 @@ private:
   ParamRepository::Instance()->SetValue(#name, val, valSrc)
 
 
-#define DECLARE_INT64(name) extern int64_t name;
+#define DECLARE_INT64(name) extern int64_t name
 #define DEFINE_INT64(name, value, alterable, desc) \
   int64_t name = ParamRepository::Instance()->CreateInt64(#name, value, desc, alterable, &name);
 #define INT64_PARAM(name) name
 #define INT64_SET(name, val, valSrc) \
   ParamRepository::Instance()->SetValue(#name, val, valSrc)
 
-#define DECLARE_BOOL(name) extern bool name;
+#define DECLARE_BOOL(name) extern bool name
 #define DEFINE_BOOL(name, value, alterable, desc) \
   bool name = ParamRepository::Instance()->CreateBOOL(#name, value, desc, alterable, &name);
 #define BOOL_PARAM(name) name

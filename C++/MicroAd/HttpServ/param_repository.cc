@@ -1,11 +1,13 @@
 #include <param_repository.h>
 #include <ad_common.h>
+#include <algorithm>
 namespace MicroAd
 {
 namespace Utils
 {
 pthread_mutex_t ParamRepository::lock_ = PTHREAD_MUTEX_INITIALIZER;
 ParamRepository* ParamRepository::instance_ = NULL;
+
 int32_t ParamRepository::CreateInt32(const char* name, const char* val, 
                                      const char* desc, bool alter, void* ptr)
 {
@@ -40,7 +42,7 @@ bool ParamRepository::CreateBool(const char* name, const char* val, const char* 
   ParamInfo pi(BOOL_T, name, desc, alter, ptr);
   std::string key(name);
   paramPool_[key] = pi;
-  return string(val) == string("true");
+  return std::string(val) == std::string("true");
 }
 
 bool ParamRepository::SetValue(const char* name, const char* val, const ValSrc vs)
@@ -53,13 +55,14 @@ bool ParamRepository::SetValue(const char* name, const char* val, const ValSrc v
     if(!pi.mutable_) return false;
     if(BOOL_T == pi.paramType_)
     {
-      string boolStr(tolower(val));
+      std::string boolStr(val);
+      std::transform(boolStr.begin(), boolStr.end(), boolStr.begin(), ::tolower);
       bool* ptr = static_cast<bool*>(pi.ptr_);
-      if(string("true") == boolStr)
+      if(std::string("true") == boolStr)
       {
         *ptr = true;
       }
-      else if(string("false") == boolStr)
+      else if(std::string("false") == boolStr)
       {
         *ptr = false;
       }
@@ -92,7 +95,7 @@ ParamRepository* ParamRepository::Instance()
     pthread_mutex_lock(&lock_);
     if(NULL == instance_)
     {
-      instance = new ParamRepository();
+      instance_ = new ParamRepository();
     }
     pthread_mutex_unlock(&lock_);
   }
@@ -100,4 +103,4 @@ ParamRepository* ParamRepository::Instance()
 }
 }
 }
-}
+
