@@ -1,6 +1,7 @@
 #include <param_repository.h>
 #include <ad_common.h>
 #include <algorithm>
+#include <sstream>
 namespace MicroAd
 {
 namespace Utils
@@ -100,6 +101,43 @@ ParamRepository* ParamRepository::Instance()
     pthread_mutex_unlock(&lock_);
   }
   return instance_;
+}
+bool ParamRepository::TableInfo(std::string& info)
+{
+  typedef std::unordered_map<std::string, ParamInfo> PoolType;
+  std::ostringstream ss;
+  ss << "<table border=\"1\">" << std::endl;
+  ss << "<tr><th>Name</th><th>Desc</th><th>Mutable</th><th>Type</th><th>Value</th></tr>"<< std::endl;
+  MutexGuard guard(&ParamRepository::lock_);
+  for(PoolType::iterator it = paramPool_.begin(); it != paramPool_.end(); ++it)
+  {
+    ParamInfo& pi = it->second;
+    ss << "<tr>";
+    ss << "<td>" << pi.name_ << "</td>";
+    ss << "<td>" << pi.desc_ << "</td>";
+    ss << "<td>" << (pi.mutable_ ? "true" : "false") << "</td>";
+    if(pi.paramType_ == BOOL_T)
+    {
+      ss << "<td>Bool</td><td>" << (*static_cast<bool*>(pi.ptr_) ? "true" : "False") \
+         << "</td>" << std::endl;
+    } else if(pi.paramType_ == INT32_T)
+    {
+      ss << "<td>Int32</td><td>" << *static_cast<int32_t*>(pi.ptr_) << "</td>";
+    } else if(pi.paramType_ == INT64_T)
+    {
+      ss << "<td>Int64</td><td>" << *static_cast<int64_t*>(pi.ptr_) << "</td>";
+    } else if(pi.paramType_ == STRING_T)
+    {
+      ss << "<td>String</td><td>" << *static_cast<std::string*>(pi.ptr_) << "</td>";
+    }else
+    {
+      return false;
+    }
+    ss << "</tr>";
+  }
+  ss << "<table>";
+  info.append(ss.str());
+  return true;
 }
 }
 }

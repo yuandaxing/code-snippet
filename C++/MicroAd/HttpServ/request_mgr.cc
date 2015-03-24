@@ -1,4 +1,5 @@
 #include <request_mgr.h>
+#include <param_repository.h>
 namespace MicroAd
 {
 namespace Utils
@@ -66,10 +67,18 @@ int RequestMgr::Monitor(struct MHD_Connection* conn, std::string& result)
 int RequestMgr::Param(struct MHD_Connection* conn, std::string& result)
 {
   result.append(HTMLBEGIN("PARAM"));
-  result.append(
-    "<table><tr><th>A</th><th>B</th></tr><tr><td>1</td><td>2</td></table>");
+  std::string content;
+  int ret = 0;
+  if(ParamRepository::Instance()->TableInfo(content))
+  {
+    result += content;
+  } else
+  {
+    result += "<p>Error</p>";
+    ret = -1;
+  }
   result.append(HTMLEND);
-  return 0;
+  return ret;
 }
 int RequestMgr::UpdateParam(struct MHD_Connection* conn, std::string& result)
 {

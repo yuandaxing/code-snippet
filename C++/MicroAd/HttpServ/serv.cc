@@ -56,6 +56,7 @@ int Serv::HttpCallback(void* cls, struct MHD_Connection* connection,
 {
   std::string c;
   std::shared_ptr<IHttpRequestProcessor> requestPtr = Serv::Instance()->requestPtr_;
+  std::cout << url;
   if(NULL == requestPtr.get() || 0 != requestPtr->Process(url, connection, c))
   {
     std::cout << "could not get request content" << std::endl;

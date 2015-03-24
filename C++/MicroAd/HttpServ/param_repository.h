@@ -17,9 +17,13 @@ struct ParamInfo
   bool mutable_;
   ValSrc valSrc_;
   void *ptr_;
+  ParamInfo():paramType_(BOOL_T), name_(""), desc_(""), mutable_(false), valSrc_(DEFAULT), \
+              ptr_(NULL){}
   ParamInfo(ParamType pt, const char* name, const char* desc, bool alter, void *ptr):
     paramType_(pt), name_(name), desc_(desc), mutable_(alter), valSrc_(DEFAULT), \
     ptr_(ptr) {}
+  ParamInfo(const ParamInfo& pi): paramType_(pi.paramType_), name_(pi.name_), desc_(pi.desc_), \
+                                  mutable_(pi.mutable_), valSrc_(pi.valSrc_), ptr_(pi.ptr_){}
 };
 class ParamRepository
 {
@@ -30,6 +34,7 @@ public:
   std::string CreateString(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   bool CreateBool(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   bool SetValue(const char* name, const char* val, const ValSrc vs);
+  bool TableInfo(std::string& info);
 private:
   ParamRepository(){}
   ParamRepository(const ParamRepository&);
@@ -56,10 +61,19 @@ private:
 
 #define DECLARE_BOOL(name) extern bool name
 #define DEFINE_BOOL(name, value, alterable, desc) \
-  bool name = ParamRepository::Instance()->CreateBOOL(#name, value, desc, alterable, &name);
+  bool name = ParamRepository::Instance()->CreateBool(#name, value, desc, alterable, &name);
 #define BOOL_PARAM(name) name
 #define BOOL_SET(name, val, valSrc) \
   ParamRepository::Instance()->SetValue(#name, val, valSrc)
+
+
+#define DECLARE_STRING(name) extern std::string name
+#define DEFINE_STRING(name, value, alterable, desc) \
+  std::string name = ParamRepository::Instance()->CreateString(#name, value, desc, alterable, &name);
+#define STRING_PARAM(name) name
+#define STRING_SET(name, val, valSrc) \
+  ParamRepository::Instance()->SetValue(#name, val, valSrc)
+
 }
 }
 #endif
