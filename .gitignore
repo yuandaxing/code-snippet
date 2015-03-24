@@ -5,3 +5,7 @@
 *.exe
 *.o
 *.out
+GPATH
+GRTAGS
+GSYMS
+GTAGS

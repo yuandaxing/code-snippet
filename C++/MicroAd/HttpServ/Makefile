@@ -7,7 +7,7 @@ AR      =ar
 
 CFLAGS =  -g -Wall -DMUTEX -DDEBUG -fno-strict-aliasing -std=c++11
 CFLAGS += -I./
-LDFLAGS = -lmicrohttpd -lpthread
+LDFLAGS = -lgtest -lmicrohttpd -lpthread
 SRCS =  serv.cc serv_ut.cc request_mgr.cc  param_repository.cc
 OBJS := $(SRCS:.cc=.o)
 
