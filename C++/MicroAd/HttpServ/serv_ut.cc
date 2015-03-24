@@ -1,3 +1,4 @@
+#include "gtest/gtest.h"
 #include <serv.h>
 #include <request_mgr.h>
 #include <stdio.h>
@@ -15,18 +16,29 @@ DEFINE_STRING(string_whitelist, "/path/t/a/b", false, "testing for string whitel
 DECLARE_STRING(string_whitelist);
 
 using namespace MicroAd::Utils;
+TEST(ParamRepository, Test)
+{
+  BOOL_SET(enable_whitelist, "true", ValSrc::COMMAND);
+  ASSERT_TRUE(enable_whitelist);
+  ASSERT_EQ(int32_whitelist, 11);
+  ASSERT_STREQ(string_whitelist.c_str(), "/path/t/a/b");
+}
 int main(int argc, char *argv[])
 {
+
+  ::testing::InitGoogleTest(&argc, argv);
+  int returnValue;
+  //Do whatever setup here you will need for your tests here
+  //
+  //
+  returnValue =  RUN_ALL_TESTS();
   std::shared_ptr<IHttpRequestProcessor> hrp(new RequestMgr());
   Serv* serv = Serv::Instance();
-  std::string content;
-  ParamRepository::Instance()->TableInfo(content);
-  std::cout << content;
   if(0 != serv->Start(hrp, 8000))
   {
     std::cout << "could not start server" << std::endl;
   }
   getchar();
   serv->Stop();
-  return 0;
+  return returnValue;
 }
