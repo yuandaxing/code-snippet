@@ -15,5 +15,7 @@ private:
   MutexGuard(const MutexGuard&);
   void operator=(const MutexGuard&);
 };
+
+
 }
 }
