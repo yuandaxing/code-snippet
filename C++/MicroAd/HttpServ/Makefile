@@ -4,9 +4,9 @@ CC      =g++
 AR      =ar
 
 
-
+LD_PATH = -L../lib/
 CFLAGS =  -g -Wall -DMUTEX -DDEBUG -fno-strict-aliasing -std=c++11
-CFLAGS += -I./
+CFLAGS += -I./ -I../include/
 LDFLAGS = -lgtest -lmicrohttpd -lpthread
 SRCS =  serv.cc serv_ut.cc request_mgr.cc  param_repository.cc
 OBJS := $(SRCS:.cc=.o)
@@ -17,7 +17,7 @@ all:$(EXECUT_TAGS) $(OBJS)
 
 
 ${EXECUT_TAGS}:${OBJS}
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CC) -o $@ $^ $(LD_PATH) $(LDFLAGS)
 
 $(OBJS):%.o:%.cc
 	$(CC) -c $(CFLAGS) -o $@ $<

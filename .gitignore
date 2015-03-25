@@ -9,3 +9,6 @@ GPATH
 GRTAGS
 GSYMS
 GTAGS
+include
+lib
+bin

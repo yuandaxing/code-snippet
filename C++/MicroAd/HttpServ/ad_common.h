@@ -22,19 +22,19 @@ private:
 };
 
 //string utils
-std::string ToLower(const std::string& str)
-{
-  std::string ret(str);
-  std::transform(str.begin(), str.end(), str.begin(), ::tolower);
-  return ret;
-}
+// std::string ToLower(const std::string& str)
+// {
+//   std::string ret(str);
+//   std::transform(str.begin(), str.end(), str.begin(), ::tolower);
+//   return ret;
+// }
 
-std::string ToUpper(const std::string& str)
-{
-  std::string ret(str);
-  std::transform(str.begin(), str.end(), str.begin(), ::toupper);
-  return ret;
-}
+// std::string ToUpper(const std::string& str)
+// {
+//   std::string ret(str);
+//   std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+//   return ret;
+// }
 
 std::string Join(const std::vector<std::string>& strs, const std::string& sep)
 {
