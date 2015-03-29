@@ -1,3 +1,5 @@
+#ifndef MICROAD_UTILS_COMMON_H_
+#define MICROAD_UTILS_COMMON_H_
 #include <pthread.h>
 #include <string>
 #include <vector>
@@ -7,8 +9,7 @@ namespace MicroAd
 {
 namespace Utils
 {
-
-class MutexGuard {
+class MutexGuard{
 public:
   explicit MutexGuard(pthread_mutex_t *mutex) : mu_(mutex) {
     pthread_mutex_lock(mu_);
@@ -21,22 +22,25 @@ private:
   void operator=(const MutexGuard&);
 };
 
-//string utils
-std::string ToLower(const std::string& str)
+/*
+ * string utils
+ * to Lower/Upper, split/join by string,
+ */
+static std::string ToLower(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::tolower);
   return ret;
 }
 
-std::string ToUpper(const std::string& str)
+static std::string ToUpper(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::toupper);
   return ret;
 }
 
-std::string Join(const std::vector<std::string>& strs, const std::string& sep)
+static std::string Join(const std::vector<std::string>& strs, const std::string& sep)
 {
   std::string ret;
   if(strs.size() < 1)
@@ -52,11 +56,11 @@ std::string Join(const std::vector<std::string>& strs, const std::string& sep)
   return ret;
 }
 
-std::vector<std::string> split(const std::string& s, const std::string& delim)
+static std::vector<std::string> Split(const std::string& s, const std::string& delim)
 {
   std::vector<std::string> ret;
   size_t last = 0;
-  size_t index=s.find_first_of(delim,last);
+  size_t index = s.find_first_of(delim,last);
   while (index!=std::string::npos)
   {
     ret.push_back(s.substr(last,index-last));
@@ -69,5 +73,17 @@ std::vector<std::string> split(const std::string& s, const std::string& delim)
   }
   return ret;
 }
+static bool StartWith(const std::string& l, const std::string& r)
+{
+  if(l.size() < r.size())
+  {
+    return false;
+  } else
+  {
+    return r.size() == 0 || l.compare(0, r.size(), r) == 0 ;
+  }
+}
+
 }
 }
+#endif
