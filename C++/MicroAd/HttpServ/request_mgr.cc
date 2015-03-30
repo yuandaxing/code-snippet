@@ -1,11 +1,15 @@
+#include <iostream>
 #include <request_mgr.h>
 #include <param_repository.h>
+#include <ad_common.h>
+#include <sstream>
 namespace MicroAd
 {
 namespace Utils
 {
 int RequestMgr::Process(const char* url, struct MHD_Connection* conn, std::string& result)
 {
+  std::cout << std::endl << "process" << std::endl;
   if(NULL == url || NULL == conn)
   {
     return -1;
@@ -19,14 +23,15 @@ int RequestMgr::Process(const char* url, struct MHD_Connection* conn, std::strin
   {
     return Param(conn, result);
   }
-  if(surl == "/param/update")
+  if(StartWith(surl, "/param/update"))
   {
-    return UpdateParam(conn, result);
+    return UpdateParam(surl, conn, result);
   }
   if(surl == "/monitor")
   {
     return Monitor(conn, result);
   }
+
   return -1;
 }
 
@@ -80,9 +85,44 @@ int RequestMgr::Param(struct MHD_Connection* conn, std::string& result)
   result.append(HTMLEND);
   return ret;
 }
-int RequestMgr::UpdateParam(struct MHD_Connection* conn, std::string& result)
+int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn, std::string& result)
 {
   //Todo
+  std::vector<std::string> splits = Split(url, "/");
+  std::cout << "update param";
+  if(splits.size() < 3)
+  {
+    return -1;
+  } else
+  {
+    std::string key = splits[3];
+    std::string setOps;
+    const char* val = MHD_lookup_connection_value(conn, MHD_HEADER_KIND, NULL);
+    if(NULL != val)
+    {
+      if(!ParamRepository::Instance()->SetValue(key, val, ValSrc::WEB))
+        setOps = "<p>Set operation failed</p>";
+      else
+        setOps = "<p>Set operation success</p>";
+    }
+    ParamInfo pi = ParamRepository::Instance()->Get(key);
+    std::ostringstream content;
+    result.append(HTMLBEGIN("UPDATE"));
+    result.append(setOps);
+    content << "<p> value: " << (val ? val : "NULL")  << "</p>";
+    content << "<p>name: " << pi.name_ <<  " type: " << ParamTypeString(pi.paramType_) << "</p>";
+    //    content << "<form action=\"/param/update/" << key <<"\" method=\"post\">" ;
+    content << "<form action=\"/param/update/" << key <<"/#\" method=\"post\">" ;
+    content << "<p>" << pi.name_ << "</p>";
+    content << "<input type=\"text\" name=\"" << key <<"\" />" ;
+    content << "<input type=\"submit\" value=\"Submit\"/>";
+    content << "</form>";
+    result.append(content.str());
+    std::cout << std::endl;
+    std::cout << "key" << key << std::endl;
+    std::cout << "name:" << pi.name_ << std::endl;
+    std::cout << "val:" << val << std::endl;
+  }
   return 0;
 }
 int RequestMgr::UpdateParamSucceed(struct MHD_Connection* conn, std::string& result)

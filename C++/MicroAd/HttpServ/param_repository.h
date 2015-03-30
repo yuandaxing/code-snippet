@@ -3,11 +3,14 @@
 #include <string>
 #include <unordered_map>
 #include <pthread.h>
+#include <ad_common.h>
+
 namespace MicroAd
 {
 namespace Utils
 {
 enum ParamType {BOOL_T, INT32_T, INT64_T, STRING_T };
+
 enum ValSrc {DEFAULT, COMMAND, WEB};
 struct ParamInfo
 {
@@ -33,8 +36,18 @@ public:
   int64_t CreateInt64(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   std::string CreateString(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   bool CreateBool(const char* name, const char* val, const char* desc, bool alter, void* ptr);
-  bool SetValue(const char* name, const char* val, const ValSrc vs);
+  bool SetValue(const std::string& name, const std::string& val, const ValSrc vs);
   bool TableInfo(std::string& info);
+
+  ParamInfo Get(const std::string& key)
+  {
+    MutexGuard guard(&ParamRepository::lock_);
+    if(paramPool_.find(key) != paramPool_.end())
+    {
+      return paramPool_[key];
+    }
+    return ParamInfo();
+  }
 private:
   ParamRepository(){}
   ParamRepository(const ParamRepository&);
@@ -74,6 +87,34 @@ private:
 #define STRING_SET(name, val, valSrc) \
   ParamRepository::Instance()->SetValue(#name, val, valSrc)
 
+static std::string ParamTypeString(ParamType pt)
+{
+  switch(pt)
+  {
+  case BOOL_T:
+    return "BOOL_T";
+  case INT32_T:
+    return "INT32_T";
+  case INT64_T:
+    return "INT64_T";
+  case STRING_T:
+    return "STRING_T";
+  }
+  return "UNKNOWN";
+}
+static std::string ValSrcString(ValSrc vs)
+{
+  switch(vs)
+  {
+  case DEFAULT:
+    return "DEFAULT";
+  case COMMAND:
+    return "COMMAND";
+  case WEB:
+    return "WEB";
+  }
+  return "UNKNOWN";
+}
 }
 }
 #endif

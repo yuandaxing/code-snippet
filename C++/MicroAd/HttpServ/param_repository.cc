@@ -6,6 +6,7 @@ namespace MicroAd
 {
 namespace Utils
 {
+
 pthread_mutex_t ParamRepository::lock_ = PTHREAD_MUTEX_INITIALIZER;
 ParamRepository* ParamRepository::instance_ = NULL;
 
@@ -46,7 +47,7 @@ bool ParamRepository::CreateBool(const char* name, const char* val, const char* 
   return std::string(val) == std::string("true");
 }
 
-bool ParamRepository::SetValue(const char* name, const char* val, const ValSrc vs)
+bool ParamRepository::SetValue(const std::string& name, const std::string& val, const ValSrc vs)
 {
   std::string key(name);
   MutexGuard guard(&ParamRepository::lock_);
@@ -78,11 +79,11 @@ bool ParamRepository::SetValue(const char* name, const char* val, const ValSrc v
     }else if(INT32_T == pi.paramType_)
     {
       int32_t* ptr = static_cast<int32_t*>(pi.ptr_);
-      *ptr = atoi(val);
+      *ptr = atoi(val.c_str());
     }else if(INT64_T == pi.paramType_)
     {
       int64_t* ptr = static_cast<int64_t*>(pi.ptr_);
-      *ptr = atoll(val);
+      *ptr = atoll(val.c_str());
     }
     pi.valSrc_ = vs;
     return true;
@@ -113,7 +114,13 @@ bool ParamRepository::TableInfo(std::string& info)
   {
     ParamInfo& pi = it->second;
     ss << "<tr>";
-    ss << "<td>" << pi.name_ << "</td>";
+    if(pi.mutable_)
+    {
+      ss << "<td><a href=\"/param/update/" << pi.name_ << "\">" << pi.name_ << "</a></td>";
+    } else
+    {
+      ss << "<td>" << pi.name_ << "</td>";
+    }
     ss << "<td>" << pi.desc_ << "</td>";
     ss << "<td>" << (pi.mutable_ ? "true" : "false") << "</td>";
     if(pi.paramType_ == BOOL_T)
