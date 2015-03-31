@@ -88,6 +88,7 @@ int RequestMgr::Param(struct MHD_Connection* conn, std::string& result)
 int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn, std::string& result)
 {
   //Todo
+
   std::vector<std::string> splits = Split(url, "/");
   std::cout << "update param";
   if(splits.size() < 3)
@@ -97,7 +98,7 @@ int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn,
   {
     std::string key = splits[3];
     std::string setOps;
-    const char* val = MHD_lookup_connection_value(conn, MHD_HEADER_KIND, NULL);
+    const char* val = MHD_lookup_connection_value(conn, MHD_GET_ARGUMENT_KIND, key.c_str());
     if(NULL != val)
     {
       if(!ParamRepository::Instance()->SetValue(key, val, ValSrc::WEB))
@@ -109,19 +110,14 @@ int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn,
     std::ostringstream content;
     result.append(HTMLBEGIN("UPDATE"));
     result.append(setOps);
-    content << "<p> value: " << (val ? val : "NULL")  << "</p>";
     content << "<p>name: " << pi.name_ <<  " type: " << ParamTypeString(pi.paramType_) << "</p>";
     //    content << "<form action=\"/param/update/" << key <<"\" method=\"post\">" ;
-    content << "<form action=\"/param/update/" << key <<"/#\" method=\"post\">" ;
+    content << "<form name=\"input\" action=\"/param/update/" << key <<"/#\" method=\"get\">" ;
     content << "<p>" << pi.name_ << "</p>";
     content << "<input type=\"text\" name=\"" << key <<"\" />" ;
     content << "<input type=\"submit\" value=\"Submit\"/>";
     content << "</form>";
     result.append(content.str());
-    std::cout << std::endl;
-    std::cout << "key" << key << std::endl;
-    std::cout << "name:" << pi.name_ << std::endl;
-    std::cout << "val:" << val << std::endl;
   }
   return 0;
 }
@@ -130,5 +126,6 @@ int RequestMgr::UpdateParamSucceed(struct MHD_Connection* conn, std::string& res
   //Todo
   return 0;
 }
+
 }
 }

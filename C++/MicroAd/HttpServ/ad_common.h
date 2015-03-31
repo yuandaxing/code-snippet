@@ -26,21 +26,21 @@ private:
  * string utils
  * to Lower/Upper, split/join by string,
  */
-static std::string ToLower(const std::string& str)
+static inline std::string ToLower(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::tolower);
   return ret;
 }
 
-static std::string ToUpper(const std::string& str)
+static inline std::string ToUpper(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::toupper);
   return ret;
 }
 
-static std::string Join(const std::vector<std::string>& strs, const std::string& sep)
+static inline std::string Join(const std::vector<std::string>& strs, const std::string& sep)
 {
   std::string ret;
   if(strs.size() < 1)
@@ -56,7 +56,7 @@ static std::string Join(const std::vector<std::string>& strs, const std::string&
   return ret;
 }
 
-static std::vector<std::string> Split(const std::string& s, const std::string& delim)
+static inline std::vector<std::string> Split(const std::string& s, const std::string& delim)
 {
   std::vector<std::string> ret;
   size_t last = 0;
@@ -73,7 +73,7 @@ static std::vector<std::string> Split(const std::string& s, const std::string& d
   }
   return ret;
 }
-static bool StartWith(const std::string& l, const std::string& r)
+static inline bool StartWith(const std::string& l, const std::string& r)
 {
   if(l.size() < r.size())
   {

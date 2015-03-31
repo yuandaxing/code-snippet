@@ -87,7 +87,7 @@ private:
 #define STRING_SET(name, val, valSrc) \
   ParamRepository::Instance()->SetValue(#name, val, valSrc)
 
-static std::string ParamTypeString(ParamType pt)
+static inline std::string ParamTypeString(ParamType pt)
 {
   switch(pt)
   {
@@ -102,7 +102,7 @@ static std::string ParamTypeString(ParamType pt)
   }
   return "UNKNOWN";
 }
-static std::string ValSrcString(ValSrc vs)
+static inline std::string ValSrcString(ValSrc vs)
 {
   switch(vs)
   {
