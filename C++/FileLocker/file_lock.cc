@@ -60,6 +60,14 @@ bool FileLocker::UnLock()
   file_lock.l_whence = SEEK_SET;
   return 0 == fcntl(fd_, F_SETLK, &file_lock);
 }
+FileLocker::~FileLocker()
+{
+  if(fd_ > 0)
+  {
+    ::close(fd_);
+    fd_ = -1;
+  }
+}
 
 bool FileLocker::TruncWrite(const std::string& content)
 {
@@ -69,13 +77,29 @@ bool FileLocker::TruncWrite(const std::string& content)
   }
   if(ftruncate(fd_, 0) != 0)
   {
-    return -1;
+    return false;
   }
-  if(write(fd_, content.c_str(), content.size()) != content.size())
+  if(write(fd_, content.c_str(), content.size()) != static_cast<int>(content.size()))
   {
-    return -1;
+    return false;
   }
-  return 0;
+  return true;
+}
+
+
+bool FileLocker::Read(std::string& result)
+{
+  if(fd_ < 0)
+  {
+    return false;
+  }
+  char buf[10];
+  int ret = 0;
+  while((ret = ::read(fd_, buf, 10)) > 0)
+  {
+    result.append(buf, ret);
+  }
+  return ret >= 0;
 }
 
 }
