@@ -4,7 +4,6 @@ CC      =g++
 AR      =ar
 
 
-
 CFLAGS =  -g -Wall -DMUTEX -DDEBUG -fno-strict-aliasing
 CFLAGS += -I./
 LDFLAGS = -lgtest -lpthread

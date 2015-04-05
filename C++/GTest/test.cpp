@@ -10,7 +10,6 @@ TEST(blahTest, blah1) {
     std::cout << v1.size() << std::endl;
     EXPECT_EQ(v1.size(), v2.size()) << "v1 and v2 have different size";
 }
-
 TEST(test1, blah1)
 {
   ASSERT_EQ(1, 2);
