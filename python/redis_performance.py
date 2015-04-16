@@ -1,5 +1,7 @@
-import redis
+import os.path
+import pickle
 import random
+import redis
 import timeit
 
 def GenStr(L):
@@ -12,6 +14,15 @@ def GenKV(num, klen, vlen):
     for i in xrange(num):
         ret[GenStr(klen)] = GenStr(vlen)
     return ret
+
+def GenOrLoad(path, num, klen, vlen):
+    if os.path.isfile(path):
+        return pickle.load(path)
+    else :
+        dic = GenKV(num, klen, vlen)
+        pickle.dump(dic, path)
+        return dic
+
 def PipeSet(client, dic):
     byteCounts, byteLimits = 0, 1000000
     with client.pipeline() as pipe:
@@ -24,8 +35,9 @@ def PipeSet(client, dic):
         pipe.execute()
         byteCounts = 0
 
-def test(num, klen, vlen, host, port):
-    dic, failed = GenKV(num, klen, vlen), 0
+
+def test(path, num, klen, vlen, host, port):
+    dic, failed = GenOrLoad(path, num, klen, vlen), 0
     client = redis.Redis(host, port)
     print '------------------------------'
     print '%d set tests in total' % (len(dic))
@@ -52,4 +64,5 @@ def test(num, klen, vlen, host, port):
     print '-----------------------------'
 
 
-test(10000, 20, 50, "10.0.2.140", 2005)
+test("./data1G.dat", 1000000, 20, 1000, "localhost", 6258)
+test("./data2G.dat", 10000000, 10, 100, "localhost", 6258)

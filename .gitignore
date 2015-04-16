@@ -12,3 +12,4 @@ GTAGS
 include
 lib
 bin
+*.pyc
