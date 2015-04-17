@@ -18,12 +18,27 @@ class RedisAgent(Daemon):
     def run(self):
         while True:
             try :
-                zk = ZooKeeper(zklist, st)
+                zk = ZooKeeper(zklist, st);
+                if not zk.exists(groupPath):
+                    zk.create_recursive(groupPath, 'redis-cluster', OPEN_ACL_UNSAFE)
+                hostName = socket.gethostname()
+                agentName, redisName = "agent-"+hostName, "redis-" + hostName
+                agentPath, redisPath = groupPath + "/" + agentName, groupPath + "/" + redisName
+                zk.create(agentPath, get_lan_ip(), ephemeral = True)
+                while True:
+                    if CheckRedis(processName, redis_port) :
+                        if redisName not in zk.children(groupPath):
+                            zk.create(redisPath, get_lan_ip(), ephemeral = True)
+                    else:
+                         if redisName in zk.children(groupPath):
+                             zk.delete(redisPath)
+                    time.sleep(1)
+            except FailedConnect as f:
+                logging.log(logging.ERROR, f)
             except Exception as e:
                 logging.log(logging.ERROR, e)
             zk.close()
             time.sleep(1)
-
 
 if __name__ == "__main__":
     daemon = RedisAgent('/tmp/redis-agent.pid')
