@@ -1,0 +1,1672 @@
+04/17/2015 03:52:27 PM INFO Connecting to localhost:2181
+04/17/2015 03:52:27 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 03:52:27 PM INFO watch_session CONNECTED
+04/17/2015 03:52:27 PM INFO connected
+04/17/2015 08:02:21 PM ERROR __init__() got multiple values for keyword argument 'session_timeout'
+04/17/2015 08:04:39 PM ERROR __init__() got multiple values for keyword argument 'session_timeout'
+04/17/2015 08:07:46 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:46 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:46 PM INFO watch_session CONNECTED
+04/17/2015 08:07:46 PM INFO connected
+04/17/2015 08:07:46 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:46 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:46 PM INFO watch_session LOST
+04/17/2015 08:07:48 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:48 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:48 PM INFO watch_session CONNECTED
+04/17/2015 08:07:48 PM INFO connected
+04/17/2015 08:07:48 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:48 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:48 PM INFO watch_session LOST
+04/17/2015 08:07:49 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:49 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:49 PM INFO watch_session CONNECTED
+04/17/2015 08:07:49 PM INFO connected
+04/17/2015 08:07:49 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:49 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:49 PM INFO watch_session LOST
+04/17/2015 08:07:50 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:50 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:50 PM INFO watch_session CONNECTED
+04/17/2015 08:07:50 PM INFO connected
+04/17/2015 08:07:50 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:50 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:50 PM INFO watch_session LOST
+04/17/2015 08:07:51 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:51 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:51 PM INFO watch_session CONNECTED
+04/17/2015 08:07:51 PM INFO connected
+04/17/2015 08:07:51 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:51 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:51 PM INFO watch_session LOST
+04/17/2015 08:07:52 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:52 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:52 PM INFO watch_session CONNECTED
+04/17/2015 08:07:52 PM INFO connected
+04/17/2015 08:07:52 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:52 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:52 PM INFO watch_session LOST
+04/17/2015 08:07:53 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:53 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:53 PM INFO watch_session CONNECTED
+04/17/2015 08:07:53 PM INFO connected
+04/17/2015 08:07:53 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:53 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:53 PM INFO watch_session LOST
+04/17/2015 08:07:54 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:54 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:54 PM INFO watch_session CONNECTED
+04/17/2015 08:07:54 PM INFO connected
+04/17/2015 08:07:54 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:54 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:54 PM INFO watch_session LOST
+04/17/2015 08:07:55 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:55 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:55 PM INFO watch_session CONNECTED
+04/17/2015 08:07:55 PM INFO connected
+04/17/2015 08:07:55 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:55 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:55 PM INFO watch_session LOST
+04/17/2015 08:07:56 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:56 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:56 PM INFO watch_session CONNECTED
+04/17/2015 08:07:56 PM INFO connected
+04/17/2015 08:07:56 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:56 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:56 PM INFO watch_session LOST
+04/17/2015 08:07:57 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:57 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:57 PM INFO watch_session CONNECTED
+04/17/2015 08:07:57 PM INFO connected
+04/17/2015 08:07:57 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:57 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:57 PM INFO watch_session LOST
+04/17/2015 08:07:58 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:58 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:58 PM INFO watch_session CONNECTED
+04/17/2015 08:07:58 PM INFO connected
+04/17/2015 08:07:58 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:58 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:58 PM INFO watch_session LOST
+04/17/2015 08:07:59 PM INFO Connecting to localhost:2181
+04/17/2015 08:07:59 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:07:59 PM INFO watch_session CONNECTED
+04/17/2015 08:07:59 PM INFO connected
+04/17/2015 08:07:59 PM INFO Closing connection to localhost:2181
+04/17/2015 08:07:59 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:07:59 PM INFO watch_session LOST
+04/17/2015 08:08:00 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:00 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:00 PM INFO watch_session CONNECTED
+04/17/2015 08:08:00 PM INFO connected
+04/17/2015 08:08:00 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:00 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:00 PM INFO watch_session LOST
+04/17/2015 08:08:01 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:01 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:01 PM INFO watch_session CONNECTED
+04/17/2015 08:08:01 PM INFO connected
+04/17/2015 08:08:01 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:01 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:01 PM INFO watch_session LOST
+04/17/2015 08:08:02 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:02 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:02 PM INFO watch_session CONNECTED
+04/17/2015 08:08:02 PM INFO connected
+04/17/2015 08:08:02 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:02 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:02 PM INFO watch_session LOST
+04/17/2015 08:08:03 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:04 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:04 PM INFO watch_session CONNECTED
+04/17/2015 08:08:04 PM INFO connected
+04/17/2015 08:08:04 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:04 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:04 PM INFO watch_session LOST
+04/17/2015 08:08:05 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:05 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:05 PM INFO watch_session CONNECTED
+04/17/2015 08:08:05 PM INFO connected
+04/17/2015 08:08:05 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:05 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:05 PM INFO watch_session LOST
+04/17/2015 08:08:06 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:06 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:06 PM INFO watch_session CONNECTED
+04/17/2015 08:08:06 PM INFO connected
+04/17/2015 08:08:06 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:06 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:06 PM INFO watch_session LOST
+04/17/2015 08:08:07 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:07 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:07 PM INFO watch_session CONNECTED
+04/17/2015 08:08:07 PM INFO connected
+04/17/2015 08:08:07 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:07 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:07 PM INFO watch_session LOST
+04/17/2015 08:08:08 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:08 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:08 PM INFO watch_session CONNECTED
+04/17/2015 08:08:08 PM INFO connected
+04/17/2015 08:08:08 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:08 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:08 PM INFO watch_session LOST
+04/17/2015 08:08:09 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:09 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:09 PM INFO watch_session CONNECTED
+04/17/2015 08:08:09 PM INFO connected
+04/17/2015 08:08:09 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:09 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:09 PM INFO watch_session LOST
+04/17/2015 08:08:10 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:10 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:10 PM INFO watch_session CONNECTED
+04/17/2015 08:08:10 PM INFO connected
+04/17/2015 08:08:10 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:10 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:10 PM INFO watch_session LOST
+04/17/2015 08:08:11 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:11 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:11 PM INFO watch_session CONNECTED
+04/17/2015 08:08:11 PM INFO connected
+04/17/2015 08:08:11 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:11 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:11 PM INFO watch_session LOST
+04/17/2015 08:08:12 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:12 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:12 PM INFO watch_session CONNECTED
+04/17/2015 08:08:12 PM INFO connected
+04/17/2015 08:08:12 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:12 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:12 PM INFO watch_session LOST
+04/17/2015 08:08:13 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:13 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:13 PM INFO watch_session CONNECTED
+04/17/2015 08:08:13 PM INFO connected
+04/17/2015 08:08:13 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:13 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:13 PM INFO watch_session LOST
+04/17/2015 08:08:14 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:14 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:14 PM INFO watch_session CONNECTED
+04/17/2015 08:08:14 PM INFO connected
+04/17/2015 08:08:14 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:14 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:14 PM INFO watch_session LOST
+04/17/2015 08:08:15 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:15 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:15 PM INFO watch_session CONNECTED
+04/17/2015 08:08:15 PM INFO connected
+04/17/2015 08:08:15 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:15 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:15 PM INFO watch_session LOST
+04/17/2015 08:08:16 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:17 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:17 PM INFO watch_session CONNECTED
+04/17/2015 08:08:17 PM INFO connected
+04/17/2015 08:08:17 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:17 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:17 PM INFO watch_session LOST
+04/17/2015 08:08:18 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:18 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:18 PM INFO watch_session CONNECTED
+04/17/2015 08:08:18 PM INFO connected
+04/17/2015 08:08:18 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:18 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:18 PM INFO watch_session LOST
+04/17/2015 08:08:19 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:19 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:19 PM INFO watch_session CONNECTED
+04/17/2015 08:08:19 PM INFO connected
+04/17/2015 08:08:19 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:19 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:19 PM INFO watch_session LOST
+04/17/2015 08:08:20 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:20 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:20 PM INFO watch_session CONNECTED
+04/17/2015 08:08:20 PM INFO connected
+04/17/2015 08:08:20 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:20 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:20 PM INFO watch_session LOST
+04/17/2015 08:08:21 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:21 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:21 PM INFO watch_session CONNECTED
+04/17/2015 08:08:21 PM INFO connected
+04/17/2015 08:08:21 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:21 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:21 PM INFO watch_session LOST
+04/17/2015 08:08:22 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:22 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:22 PM INFO watch_session CONNECTED
+04/17/2015 08:08:22 PM INFO connected
+04/17/2015 08:08:22 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:22 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:22 PM INFO watch_session LOST
+04/17/2015 08:08:23 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:23 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:23 PM INFO watch_session CONNECTED
+04/17/2015 08:08:23 PM INFO connected
+04/17/2015 08:08:23 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:23 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:23 PM INFO watch_session LOST
+04/17/2015 08:08:24 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:24 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:24 PM INFO watch_session CONNECTED
+04/17/2015 08:08:24 PM INFO connected
+04/17/2015 08:08:24 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:24 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:24 PM INFO watch_session LOST
+04/17/2015 08:08:25 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:25 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:25 PM INFO watch_session CONNECTED
+04/17/2015 08:08:25 PM INFO connected
+04/17/2015 08:08:25 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:25 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:25 PM INFO watch_session LOST
+04/17/2015 08:08:26 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:26 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:26 PM INFO watch_session CONNECTED
+04/17/2015 08:08:26 PM INFO connected
+04/17/2015 08:08:26 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:26 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:26 PM INFO watch_session LOST
+04/17/2015 08:08:27 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:27 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:27 PM INFO watch_session CONNECTED
+04/17/2015 08:08:27 PM INFO connected
+04/17/2015 08:08:27 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:27 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:27 PM INFO watch_session LOST
+04/17/2015 08:08:28 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:28 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:28 PM INFO watch_session CONNECTED
+04/17/2015 08:08:28 PM INFO connected
+04/17/2015 08:08:28 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:28 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:28 PM INFO watch_session LOST
+04/17/2015 08:08:29 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:29 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:29 PM INFO watch_session CONNECTED
+04/17/2015 08:08:29 PM INFO connected
+04/17/2015 08:08:29 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:29 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:29 PM INFO watch_session LOST
+04/17/2015 08:08:30 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:30 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:30 PM INFO watch_session CONNECTED
+04/17/2015 08:08:30 PM INFO connected
+04/17/2015 08:08:30 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:30 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:30 PM INFO watch_session LOST
+04/17/2015 08:08:31 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:31 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:31 PM INFO watch_session CONNECTED
+04/17/2015 08:08:31 PM INFO connected
+04/17/2015 08:08:31 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:31 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:31 PM INFO watch_session LOST
+04/17/2015 08:08:33 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:33 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:33 PM INFO watch_session CONNECTED
+04/17/2015 08:08:33 PM INFO connected
+04/17/2015 08:08:33 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:33 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:33 PM INFO watch_session LOST
+04/17/2015 08:08:34 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:34 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:34 PM INFO watch_session CONNECTED
+04/17/2015 08:08:34 PM INFO connected
+04/17/2015 08:08:34 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:34 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:34 PM INFO watch_session LOST
+04/17/2015 08:08:35 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:35 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:35 PM INFO watch_session CONNECTED
+04/17/2015 08:08:35 PM INFO connected
+04/17/2015 08:08:35 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:35 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:35 PM INFO watch_session LOST
+04/17/2015 08:08:36 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:36 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:36 PM INFO watch_session CONNECTED
+04/17/2015 08:08:36 PM INFO connected
+04/17/2015 08:08:36 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:36 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:36 PM INFO watch_session LOST
+04/17/2015 08:08:37 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:37 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:37 PM INFO watch_session CONNECTED
+04/17/2015 08:08:37 PM INFO connected
+04/17/2015 08:08:37 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:37 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:37 PM INFO watch_session LOST
+04/17/2015 08:08:38 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:38 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:38 PM INFO watch_session CONNECTED
+04/17/2015 08:08:38 PM INFO connected
+04/17/2015 08:08:38 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:38 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:38 PM INFO watch_session LOST
+04/17/2015 08:08:39 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:39 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:39 PM INFO watch_session CONNECTED
+04/17/2015 08:08:39 PM INFO connected
+04/17/2015 08:08:39 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:39 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:39 PM INFO watch_session LOST
+04/17/2015 08:08:40 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:40 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:40 PM INFO watch_session CONNECTED
+04/17/2015 08:08:40 PM INFO connected
+04/17/2015 08:08:40 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:40 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:40 PM INFO watch_session LOST
+04/17/2015 08:08:41 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:41 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:41 PM INFO watch_session CONNECTED
+04/17/2015 08:08:41 PM INFO connected
+04/17/2015 08:08:41 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:41 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:41 PM INFO watch_session LOST
+04/17/2015 08:08:42 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:42 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:42 PM INFO watch_session CONNECTED
+04/17/2015 08:08:42 PM INFO connected
+04/17/2015 08:08:42 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:42 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:42 PM INFO watch_session LOST
+04/17/2015 08:08:43 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:43 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:43 PM INFO watch_session CONNECTED
+04/17/2015 08:08:43 PM INFO connected
+04/17/2015 08:08:43 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:43 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:43 PM INFO watch_session LOST
+04/17/2015 08:08:44 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:44 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:44 PM INFO watch_session CONNECTED
+04/17/2015 08:08:44 PM INFO connected
+04/17/2015 08:08:44 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:44 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:44 PM INFO watch_session LOST
+04/17/2015 08:08:45 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:45 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:45 PM INFO watch_session CONNECTED
+04/17/2015 08:08:45 PM INFO connected
+04/17/2015 08:08:45 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:45 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:45 PM INFO watch_session LOST
+04/17/2015 08:08:46 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:46 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:46 PM INFO watch_session CONNECTED
+04/17/2015 08:08:46 PM INFO connected
+04/17/2015 08:08:46 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:46 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:46 PM INFO watch_session LOST
+04/17/2015 08:08:47 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:47 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:47 PM INFO watch_session CONNECTED
+04/17/2015 08:08:47 PM INFO connected
+04/17/2015 08:08:47 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:47 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:47 PM INFO watch_session LOST
+04/17/2015 08:08:48 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:48 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:48 PM INFO watch_session CONNECTED
+04/17/2015 08:08:48 PM INFO connected
+04/17/2015 08:08:48 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:48 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:48 PM INFO watch_session LOST
+04/17/2015 08:08:49 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:50 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:50 PM INFO watch_session CONNECTED
+04/17/2015 08:08:50 PM INFO connected
+04/17/2015 08:08:50 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:50 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:50 PM INFO watch_session LOST
+04/17/2015 08:08:51 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:51 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:51 PM INFO watch_session CONNECTED
+04/17/2015 08:08:51 PM INFO connected
+04/17/2015 08:08:51 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:51 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:51 PM INFO watch_session LOST
+04/17/2015 08:08:52 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:52 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:52 PM INFO watch_session CONNECTED
+04/17/2015 08:08:52 PM INFO connected
+04/17/2015 08:08:52 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:52 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:52 PM INFO watch_session LOST
+04/17/2015 08:08:53 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:53 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:53 PM INFO watch_session CONNECTED
+04/17/2015 08:08:53 PM INFO connected
+04/17/2015 08:08:53 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:53 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:53 PM INFO watch_session LOST
+04/17/2015 08:08:54 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:54 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:54 PM INFO watch_session CONNECTED
+04/17/2015 08:08:54 PM INFO connected
+04/17/2015 08:08:54 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:54 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:54 PM INFO watch_session LOST
+04/17/2015 08:08:55 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:55 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:55 PM INFO watch_session CONNECTED
+04/17/2015 08:08:55 PM INFO connected
+04/17/2015 08:08:55 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:55 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:55 PM INFO watch_session LOST
+04/17/2015 08:08:56 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:56 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:56 PM INFO watch_session CONNECTED
+04/17/2015 08:08:56 PM INFO connected
+04/17/2015 08:08:56 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:56 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:56 PM INFO watch_session LOST
+04/17/2015 08:08:57 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:57 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:57 PM INFO watch_session CONNECTED
+04/17/2015 08:08:57 PM INFO connected
+04/17/2015 08:08:57 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:57 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:57 PM INFO watch_session LOST
+04/17/2015 08:08:58 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:58 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:58 PM INFO watch_session CONNECTED
+04/17/2015 08:08:58 PM INFO connected
+04/17/2015 08:08:58 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:58 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:58 PM INFO watch_session LOST
+04/17/2015 08:08:59 PM INFO Connecting to localhost:2181
+04/17/2015 08:08:59 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:08:59 PM INFO watch_session CONNECTED
+04/17/2015 08:08:59 PM INFO connected
+04/17/2015 08:08:59 PM INFO Closing connection to localhost:2181
+04/17/2015 08:08:59 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:08:59 PM INFO watch_session LOST
+04/17/2015 08:09:00 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:00 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:00 PM INFO watch_session CONNECTED
+04/17/2015 08:09:00 PM INFO connected
+04/17/2015 08:09:00 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:00 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:00 PM INFO watch_session LOST
+04/17/2015 08:09:01 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:01 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:01 PM INFO watch_session CONNECTED
+04/17/2015 08:09:01 PM INFO connected
+04/17/2015 08:09:01 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:01 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:01 PM INFO watch_session LOST
+04/17/2015 08:09:02 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:02 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:02 PM INFO watch_session CONNECTED
+04/17/2015 08:09:02 PM INFO connected
+04/17/2015 08:09:02 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:02 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:02 PM INFO watch_session LOST
+04/17/2015 08:09:03 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:03 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:03 PM INFO watch_session CONNECTED
+04/17/2015 08:09:03 PM INFO connected
+04/17/2015 08:09:03 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:03 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:03 PM INFO watch_session LOST
+04/17/2015 08:09:04 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:04 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:04 PM INFO watch_session CONNECTED
+04/17/2015 08:09:04 PM INFO connected
+04/17/2015 08:09:04 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:04 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:04 PM INFO watch_session LOST
+04/17/2015 08:09:05 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:05 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:05 PM INFO watch_session CONNECTED
+04/17/2015 08:09:05 PM INFO connected
+04/17/2015 08:09:05 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:05 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:05 PM INFO watch_session LOST
+04/17/2015 08:09:07 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:07 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:07 PM INFO watch_session CONNECTED
+04/17/2015 08:09:07 PM INFO connected
+04/17/2015 08:09:07 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:07 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:07 PM INFO watch_session LOST
+04/17/2015 08:09:08 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:08 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:08 PM INFO watch_session CONNECTED
+04/17/2015 08:09:08 PM INFO connected
+04/17/2015 08:09:08 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:08 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:08 PM INFO watch_session LOST
+04/17/2015 08:09:09 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:09 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:09 PM INFO watch_session CONNECTED
+04/17/2015 08:09:09 PM INFO connected
+04/17/2015 08:09:09 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:09 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:09 PM INFO watch_session LOST
+04/17/2015 08:09:10 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:10 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:10 PM INFO watch_session CONNECTED
+04/17/2015 08:09:10 PM INFO connected
+04/17/2015 08:09:10 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:10 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:10 PM INFO watch_session LOST
+04/17/2015 08:09:11 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:11 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:11 PM INFO watch_session CONNECTED
+04/17/2015 08:09:11 PM INFO connected
+04/17/2015 08:09:11 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:11 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:11 PM INFO watch_session LOST
+04/17/2015 08:09:12 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:12 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:12 PM INFO watch_session CONNECTED
+04/17/2015 08:09:12 PM INFO connected
+04/17/2015 08:09:12 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:12 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:12 PM INFO watch_session LOST
+04/17/2015 08:09:13 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:13 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:13 PM INFO watch_session CONNECTED
+04/17/2015 08:09:13 PM INFO connected
+04/17/2015 08:09:13 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:13 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:13 PM INFO watch_session LOST
+04/17/2015 08:09:14 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:14 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:14 PM INFO watch_session CONNECTED
+04/17/2015 08:09:14 PM INFO connected
+04/17/2015 08:09:14 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:14 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:14 PM INFO watch_session LOST
+04/17/2015 08:09:15 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:15 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:15 PM INFO watch_session CONNECTED
+04/17/2015 08:09:15 PM INFO connected
+04/17/2015 08:09:15 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:15 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:15 PM INFO watch_session LOST
+04/17/2015 08:09:16 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:16 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:16 PM INFO watch_session CONNECTED
+04/17/2015 08:09:16 PM INFO connected
+04/17/2015 08:09:16 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:16 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:16 PM INFO watch_session LOST
+04/17/2015 08:09:17 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:17 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:17 PM INFO watch_session CONNECTED
+04/17/2015 08:09:17 PM INFO connected
+04/17/2015 08:09:17 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:17 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:17 PM INFO watch_session LOST
+04/17/2015 08:09:18 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:18 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:18 PM INFO watch_session CONNECTED
+04/17/2015 08:09:18 PM INFO connected
+04/17/2015 08:09:18 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:18 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:18 PM INFO watch_session LOST
+04/17/2015 08:09:19 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:19 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:19 PM INFO watch_session CONNECTED
+04/17/2015 08:09:19 PM INFO connected
+04/17/2015 08:09:19 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:19 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:19 PM INFO watch_session LOST
+04/17/2015 08:09:20 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:20 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:20 PM INFO watch_session CONNECTED
+04/17/2015 08:09:20 PM INFO connected
+04/17/2015 08:09:20 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:20 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:20 PM INFO watch_session LOST
+04/17/2015 08:09:21 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:21 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:21 PM INFO watch_session CONNECTED
+04/17/2015 08:09:21 PM INFO connected
+04/17/2015 08:09:22 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:22 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:22 PM INFO watch_session LOST
+04/17/2015 08:09:23 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:23 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:23 PM INFO watch_session CONNECTED
+04/17/2015 08:09:23 PM INFO connected
+04/17/2015 08:09:23 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:23 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:23 PM INFO watch_session LOST
+04/17/2015 08:09:24 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:24 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:24 PM INFO watch_session CONNECTED
+04/17/2015 08:09:24 PM INFO connected
+04/17/2015 08:09:24 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:24 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:24 PM INFO watch_session LOST
+04/17/2015 08:09:25 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:25 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:25 PM INFO watch_session CONNECTED
+04/17/2015 08:09:25 PM INFO connected
+04/17/2015 08:09:25 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:25 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:25 PM INFO watch_session LOST
+04/17/2015 08:09:26 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:26 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:26 PM INFO watch_session CONNECTED
+04/17/2015 08:09:26 PM INFO connected
+04/17/2015 08:09:26 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:26 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:26 PM INFO watch_session LOST
+04/17/2015 08:09:27 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:27 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:27 PM INFO watch_session CONNECTED
+04/17/2015 08:09:27 PM INFO connected
+04/17/2015 08:09:27 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:27 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:27 PM INFO watch_session LOST
+04/17/2015 08:09:28 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:28 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:28 PM INFO watch_session CONNECTED
+04/17/2015 08:09:28 PM INFO connected
+04/17/2015 08:09:28 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:28 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:28 PM INFO watch_session LOST
+04/17/2015 08:09:29 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:29 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:29 PM INFO watch_session CONNECTED
+04/17/2015 08:09:29 PM INFO connected
+04/17/2015 08:09:29 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:29 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:29 PM INFO watch_session LOST
+04/17/2015 08:09:30 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:30 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:30 PM INFO watch_session CONNECTED
+04/17/2015 08:09:30 PM INFO connected
+04/17/2015 08:09:30 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:30 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:30 PM INFO watch_session LOST
+04/17/2015 08:09:31 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:31 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:31 PM INFO watch_session CONNECTED
+04/17/2015 08:09:31 PM INFO connected
+04/17/2015 08:09:31 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:31 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:31 PM INFO watch_session LOST
+04/17/2015 08:09:32 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:32 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:32 PM INFO watch_session CONNECTED
+04/17/2015 08:09:32 PM INFO connected
+04/17/2015 08:09:32 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:32 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:32 PM INFO watch_session LOST
+04/17/2015 08:09:33 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:33 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:33 PM INFO watch_session CONNECTED
+04/17/2015 08:09:33 PM INFO connected
+04/17/2015 08:09:33 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:33 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:33 PM INFO watch_session LOST
+04/17/2015 08:09:34 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:34 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:34 PM INFO watch_session CONNECTED
+04/17/2015 08:09:34 PM INFO connected
+04/17/2015 08:09:34 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:34 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:34 PM INFO watch_session LOST
+04/17/2015 08:09:35 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:35 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:35 PM INFO watch_session CONNECTED
+04/17/2015 08:09:35 PM INFO connected
+04/17/2015 08:09:35 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:35 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:35 PM INFO watch_session LOST
+04/17/2015 08:09:36 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:36 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:36 PM INFO watch_session CONNECTED
+04/17/2015 08:09:36 PM INFO connected
+04/17/2015 08:09:36 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:36 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:36 PM INFO watch_session LOST
+04/17/2015 08:09:37 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:37 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:37 PM INFO watch_session CONNECTED
+04/17/2015 08:09:37 PM INFO connected
+04/17/2015 08:09:38 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:38 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:38 PM INFO watch_session LOST
+04/17/2015 08:09:39 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:39 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:39 PM INFO watch_session CONNECTED
+04/17/2015 08:09:39 PM INFO connected
+04/17/2015 08:09:39 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:39 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:39 PM INFO watch_session LOST
+04/17/2015 08:09:40 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:40 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:40 PM INFO watch_session CONNECTED
+04/17/2015 08:09:40 PM INFO connected
+04/17/2015 08:09:40 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:40 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:40 PM INFO watch_session LOST
+04/17/2015 08:09:41 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:41 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:41 PM INFO watch_session CONNECTED
+04/17/2015 08:09:41 PM INFO connected
+04/17/2015 08:09:41 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:41 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:41 PM INFO watch_session LOST
+04/17/2015 08:09:42 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:42 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:42 PM INFO watch_session CONNECTED
+04/17/2015 08:09:42 PM INFO connected
+04/17/2015 08:09:42 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:42 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:42 PM INFO watch_session LOST
+04/17/2015 08:09:43 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:43 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:43 PM INFO watch_session CONNECTED
+04/17/2015 08:09:43 PM INFO connected
+04/17/2015 08:09:43 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:43 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:43 PM INFO watch_session LOST
+04/17/2015 08:09:44 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:44 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:44 PM INFO watch_session CONNECTED
+04/17/2015 08:09:44 PM INFO connected
+04/17/2015 08:09:44 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:44 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:44 PM INFO watch_session LOST
+04/17/2015 08:09:45 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:45 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:45 PM INFO watch_session CONNECTED
+04/17/2015 08:09:45 PM INFO connected
+04/17/2015 08:09:45 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:45 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:45 PM INFO watch_session LOST
+04/17/2015 08:09:46 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:46 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:46 PM INFO watch_session CONNECTED
+04/17/2015 08:09:46 PM INFO connected
+04/17/2015 08:09:46 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:46 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:46 PM INFO watch_session LOST
+04/17/2015 08:09:47 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:47 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:47 PM INFO watch_session CONNECTED
+04/17/2015 08:09:47 PM INFO connected
+04/17/2015 08:09:47 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:47 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:47 PM INFO watch_session LOST
+04/17/2015 08:09:48 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:48 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:48 PM INFO watch_session CONNECTED
+04/17/2015 08:09:48 PM INFO connected
+04/17/2015 08:09:48 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:48 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:48 PM INFO watch_session LOST
+04/17/2015 08:09:49 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:49 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:49 PM INFO watch_session CONNECTED
+04/17/2015 08:09:49 PM INFO connected
+04/17/2015 08:09:49 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:49 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:49 PM INFO watch_session LOST
+04/17/2015 08:09:50 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:50 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:50 PM INFO watch_session CONNECTED
+04/17/2015 08:09:50 PM INFO connected
+04/17/2015 08:09:50 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:50 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:50 PM INFO watch_session LOST
+04/17/2015 08:09:51 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:51 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:51 PM INFO watch_session CONNECTED
+04/17/2015 08:09:51 PM INFO connected
+04/17/2015 08:09:51 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:51 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:51 PM INFO watch_session LOST
+04/17/2015 08:09:52 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:52 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:52 PM INFO watch_session CONNECTED
+04/17/2015 08:09:52 PM INFO connected
+04/17/2015 08:09:52 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:52 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:52 PM INFO watch_session LOST
+04/17/2015 08:09:53 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:53 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:53 PM INFO watch_session CONNECTED
+04/17/2015 08:09:53 PM INFO connected
+04/17/2015 08:09:53 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:53 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:53 PM INFO watch_session LOST
+04/17/2015 08:09:54 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:54 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:54 PM INFO watch_session CONNECTED
+04/17/2015 08:09:54 PM INFO connected
+04/17/2015 08:09:54 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:54 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:54 PM INFO watch_session LOST
+04/17/2015 08:09:55 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:55 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:55 PM INFO watch_session CONNECTED
+04/17/2015 08:09:55 PM INFO connected
+04/17/2015 08:09:56 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:56 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:56 PM INFO watch_session LOST
+04/17/2015 08:09:57 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:57 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:57 PM INFO watch_session CONNECTED
+04/17/2015 08:09:57 PM INFO connected
+04/17/2015 08:09:57 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:57 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:57 PM INFO watch_session LOST
+04/17/2015 08:09:58 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:58 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:58 PM INFO watch_session CONNECTED
+04/17/2015 08:09:58 PM INFO connected
+04/17/2015 08:09:58 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:58 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:58 PM INFO watch_session LOST
+04/17/2015 08:09:59 PM INFO Connecting to localhost:2181
+04/17/2015 08:09:59 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:09:59 PM INFO watch_session CONNECTED
+04/17/2015 08:09:59 PM INFO connected
+04/17/2015 08:09:59 PM INFO Closing connection to localhost:2181
+04/17/2015 08:09:59 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:09:59 PM INFO watch_session LOST
+04/17/2015 08:10:00 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:00 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:00 PM INFO watch_session CONNECTED
+04/17/2015 08:10:00 PM INFO connected
+04/17/2015 08:10:00 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:00 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:00 PM INFO watch_session LOST
+04/17/2015 08:10:01 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:01 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:01 PM INFO watch_session CONNECTED
+04/17/2015 08:10:01 PM INFO connected
+04/17/2015 08:10:01 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:01 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:01 PM INFO watch_session LOST
+04/17/2015 08:10:02 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:02 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:02 PM INFO watch_session CONNECTED
+04/17/2015 08:10:02 PM INFO connected
+04/17/2015 08:10:02 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:02 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:02 PM INFO watch_session LOST
+04/17/2015 08:10:03 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:03 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:03 PM INFO watch_session CONNECTED
+04/17/2015 08:10:03 PM INFO connected
+04/17/2015 08:10:03 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:03 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:03 PM INFO watch_session LOST
+04/17/2015 08:10:04 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:04 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:04 PM INFO watch_session CONNECTED
+04/17/2015 08:10:04 PM INFO connected
+04/17/2015 08:10:04 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:04 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:04 PM INFO watch_session LOST
+04/17/2015 08:10:05 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:05 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:05 PM INFO watch_session CONNECTED
+04/17/2015 08:10:05 PM INFO connected
+04/17/2015 08:10:05 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:05 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:05 PM INFO watch_session LOST
+04/17/2015 08:10:06 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:06 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:06 PM INFO watch_session CONNECTED
+04/17/2015 08:10:06 PM INFO connected
+04/17/2015 08:10:06 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:06 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:06 PM INFO watch_session LOST
+04/17/2015 08:10:07 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:07 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:07 PM INFO watch_session CONNECTED
+04/17/2015 08:10:07 PM INFO connected
+04/17/2015 08:10:07 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:07 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:07 PM INFO watch_session LOST
+04/17/2015 08:10:08 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:09 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:09 PM INFO watch_session CONNECTED
+04/17/2015 08:10:09 PM INFO connected
+04/17/2015 08:10:09 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:09 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:09 PM INFO watch_session LOST
+04/17/2015 08:10:10 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:10 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:10 PM INFO watch_session CONNECTED
+04/17/2015 08:10:10 PM INFO connected
+04/17/2015 08:10:10 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:10 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:10 PM INFO watch_session LOST
+04/17/2015 08:10:11 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:11 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:11 PM INFO watch_session CONNECTED
+04/17/2015 08:10:11 PM INFO connected
+04/17/2015 08:10:11 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:11 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:11 PM INFO watch_session LOST
+04/17/2015 08:10:12 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:12 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:12 PM INFO watch_session CONNECTED
+04/17/2015 08:10:12 PM INFO connected
+04/17/2015 08:10:12 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:12 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:12 PM INFO watch_session LOST
+04/17/2015 08:10:13 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:13 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:13 PM INFO watch_session CONNECTED
+04/17/2015 08:10:13 PM INFO connected
+04/17/2015 08:10:13 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:13 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:13 PM INFO watch_session LOST
+04/17/2015 08:10:14 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:14 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:14 PM INFO watch_session CONNECTED
+04/17/2015 08:10:14 PM INFO connected
+04/17/2015 08:10:14 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:14 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:14 PM INFO watch_session LOST
+04/17/2015 08:10:15 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:15 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:15 PM INFO watch_session CONNECTED
+04/17/2015 08:10:15 PM INFO connected
+04/17/2015 08:10:15 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:15 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:15 PM INFO watch_session LOST
+04/17/2015 08:10:16 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:16 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:16 PM INFO watch_session CONNECTED
+04/17/2015 08:10:16 PM INFO connected
+04/17/2015 08:10:16 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:16 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:16 PM INFO watch_session LOST
+04/17/2015 08:10:17 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:17 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:17 PM INFO watch_session CONNECTED
+04/17/2015 08:10:17 PM INFO connected
+04/17/2015 08:10:17 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:17 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:17 PM INFO watch_session LOST
+04/17/2015 08:10:18 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:18 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:18 PM INFO watch_session CONNECTED
+04/17/2015 08:10:18 PM INFO connected
+04/17/2015 08:10:18 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:18 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:18 PM INFO watch_session LOST
+04/17/2015 08:10:19 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:19 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:19 PM INFO watch_session CONNECTED
+04/17/2015 08:10:19 PM INFO connected
+04/17/2015 08:10:19 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:19 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:19 PM INFO watch_session LOST
+04/17/2015 08:10:20 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:20 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:20 PM INFO watch_session CONNECTED
+04/17/2015 08:10:20 PM INFO connected
+04/17/2015 08:10:20 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:20 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:20 PM INFO watch_session LOST
+04/17/2015 08:10:21 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:21 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:21 PM INFO watch_session CONNECTED
+04/17/2015 08:10:21 PM INFO connected
+04/17/2015 08:10:21 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:21 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:21 PM INFO watch_session LOST
+04/17/2015 08:10:22 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:22 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:22 PM INFO watch_session CONNECTED
+04/17/2015 08:10:22 PM INFO connected
+04/17/2015 08:10:22 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:22 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:22 PM INFO watch_session LOST
+04/17/2015 08:10:23 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:23 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:23 PM INFO watch_session CONNECTED
+04/17/2015 08:10:23 PM INFO connected
+04/17/2015 08:10:23 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:23 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:23 PM INFO watch_session LOST
+04/17/2015 08:10:24 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:25 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:25 PM INFO watch_session CONNECTED
+04/17/2015 08:10:25 PM INFO connected
+04/17/2015 08:10:25 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:25 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:25 PM INFO watch_session LOST
+04/17/2015 08:10:26 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:26 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:26 PM INFO watch_session CONNECTED
+04/17/2015 08:10:26 PM INFO connected
+04/17/2015 08:10:26 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:26 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:26 PM INFO watch_session LOST
+04/17/2015 08:10:27 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:27 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:27 PM INFO watch_session CONNECTED
+04/17/2015 08:10:27 PM INFO connected
+04/17/2015 08:10:27 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:27 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:27 PM INFO watch_session LOST
+04/17/2015 08:10:28 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:28 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:28 PM INFO watch_session CONNECTED
+04/17/2015 08:10:28 PM INFO connected
+04/17/2015 08:10:28 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:28 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:28 PM INFO watch_session LOST
+04/17/2015 08:10:29 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:29 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:29 PM INFO watch_session CONNECTED
+04/17/2015 08:10:29 PM INFO connected
+04/17/2015 08:10:29 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:29 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:29 PM INFO watch_session LOST
+04/17/2015 08:10:30 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:30 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:30 PM INFO watch_session CONNECTED
+04/17/2015 08:10:30 PM INFO connected
+04/17/2015 08:10:30 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:30 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:30 PM INFO watch_session LOST
+04/17/2015 08:10:31 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:31 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:31 PM INFO watch_session CONNECTED
+04/17/2015 08:10:31 PM INFO connected
+04/17/2015 08:10:31 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:31 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:31 PM INFO watch_session LOST
+04/17/2015 08:10:32 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:32 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:32 PM INFO watch_session CONNECTED
+04/17/2015 08:10:32 PM INFO connected
+04/17/2015 08:10:32 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:32 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:32 PM INFO watch_session LOST
+04/17/2015 08:10:33 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:33 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:33 PM INFO watch_session CONNECTED
+04/17/2015 08:10:33 PM INFO connected
+04/17/2015 08:10:33 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:33 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:33 PM INFO watch_session LOST
+04/17/2015 08:10:34 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:34 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:34 PM INFO watch_session CONNECTED
+04/17/2015 08:10:34 PM INFO connected
+04/17/2015 08:10:34 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:34 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:34 PM INFO watch_session LOST
+04/17/2015 08:10:35 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:35 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:35 PM INFO watch_session CONNECTED
+04/17/2015 08:10:35 PM INFO connected
+04/17/2015 08:10:35 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:35 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:35 PM INFO watch_session LOST
+04/17/2015 08:10:36 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:36 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:36 PM INFO watch_session CONNECTED
+04/17/2015 08:10:36 PM INFO connected
+04/17/2015 08:10:36 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:36 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:36 PM INFO watch_session LOST
+04/17/2015 08:10:37 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:37 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:37 PM INFO watch_session CONNECTED
+04/17/2015 08:10:37 PM INFO connected
+04/17/2015 08:10:37 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:37 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:37 PM INFO watch_session LOST
+04/17/2015 08:10:38 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:38 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:38 PM INFO watch_session CONNECTED
+04/17/2015 08:10:38 PM INFO connected
+04/17/2015 08:10:38 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:38 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:38 PM INFO watch_session LOST
+04/17/2015 08:10:39 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:39 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:39 PM INFO watch_session CONNECTED
+04/17/2015 08:10:39 PM INFO connected
+04/17/2015 08:10:40 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:40 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:40 PM INFO watch_session LOST
+04/17/2015 08:10:41 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:41 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:41 PM INFO watch_session CONNECTED
+04/17/2015 08:10:41 PM INFO connected
+04/17/2015 08:10:41 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:41 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:41 PM INFO watch_session LOST
+04/17/2015 08:10:42 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:42 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:42 PM INFO watch_session CONNECTED
+04/17/2015 08:10:42 PM INFO connected
+04/17/2015 08:10:42 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:42 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:42 PM INFO watch_session LOST
+04/17/2015 08:10:43 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:43 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:43 PM INFO watch_session CONNECTED
+04/17/2015 08:10:43 PM INFO connected
+04/17/2015 08:10:43 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:43 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:43 PM INFO watch_session LOST
+04/17/2015 08:10:44 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:44 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:44 PM INFO watch_session CONNECTED
+04/17/2015 08:10:44 PM INFO connected
+04/17/2015 08:10:44 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:44 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:44 PM INFO watch_session LOST
+04/17/2015 08:10:45 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:45 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:45 PM INFO watch_session CONNECTED
+04/17/2015 08:10:45 PM INFO connected
+04/17/2015 08:10:45 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:45 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:45 PM INFO watch_session LOST
+04/17/2015 08:10:46 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:46 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:46 PM INFO watch_session CONNECTED
+04/17/2015 08:10:46 PM INFO connected
+04/17/2015 08:10:46 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:46 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:46 PM INFO watch_session LOST
+04/17/2015 08:10:47 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:47 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:47 PM INFO watch_session CONNECTED
+04/17/2015 08:10:47 PM INFO connected
+04/17/2015 08:10:47 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:47 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:47 PM INFO watch_session LOST
+04/17/2015 08:10:48 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:48 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:48 PM INFO watch_session CONNECTED
+04/17/2015 08:10:48 PM INFO connected
+04/17/2015 08:10:48 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:48 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:48 PM INFO watch_session LOST
+04/17/2015 08:10:49 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:49 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:49 PM INFO watch_session CONNECTED
+04/17/2015 08:10:49 PM INFO connected
+04/17/2015 08:10:49 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:49 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:49 PM INFO watch_session LOST
+04/17/2015 08:10:50 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:50 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:50 PM INFO watch_session CONNECTED
+04/17/2015 08:10:50 PM INFO connected
+04/17/2015 08:10:50 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:50 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:50 PM INFO watch_session LOST
+04/17/2015 08:10:51 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:51 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:51 PM INFO watch_session CONNECTED
+04/17/2015 08:10:51 PM INFO connected
+04/17/2015 08:10:51 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:51 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:51 PM INFO watch_session LOST
+04/17/2015 08:10:52 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:52 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:52 PM INFO watch_session CONNECTED
+04/17/2015 08:10:52 PM INFO connected
+04/17/2015 08:10:52 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:52 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:52 PM INFO watch_session LOST
+04/17/2015 08:10:53 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:53 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:53 PM INFO watch_session CONNECTED
+04/17/2015 08:10:53 PM INFO connected
+04/17/2015 08:10:53 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:53 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:53 PM INFO watch_session LOST
+04/17/2015 08:10:54 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:54 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:54 PM INFO watch_session CONNECTED
+04/17/2015 08:10:54 PM INFO connected
+04/17/2015 08:10:54 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:54 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:54 PM INFO watch_session LOST
+04/17/2015 08:10:55 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:55 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:55 PM INFO watch_session CONNECTED
+04/17/2015 08:10:55 PM INFO connected
+04/17/2015 08:10:56 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:56 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:56 PM INFO watch_session LOST
+04/17/2015 08:10:57 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:57 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:57 PM INFO watch_session CONNECTED
+04/17/2015 08:10:57 PM INFO connected
+04/17/2015 08:10:57 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:57 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:57 PM INFO watch_session LOST
+04/17/2015 08:10:58 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:58 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:58 PM INFO watch_session CONNECTED
+04/17/2015 08:10:58 PM INFO connected
+04/17/2015 08:10:58 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:58 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:58 PM INFO watch_session LOST
+04/17/2015 08:10:59 PM INFO Connecting to localhost:2181
+04/17/2015 08:10:59 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:10:59 PM INFO watch_session CONNECTED
+04/17/2015 08:10:59 PM INFO connected
+04/17/2015 08:10:59 PM INFO Closing connection to localhost:2181
+04/17/2015 08:10:59 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:10:59 PM INFO watch_session LOST
+04/17/2015 08:11:00 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:00 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:00 PM INFO watch_session CONNECTED
+04/17/2015 08:11:00 PM INFO connected
+04/17/2015 08:11:00 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:00 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:00 PM INFO watch_session LOST
+04/17/2015 08:11:01 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:01 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:01 PM INFO watch_session CONNECTED
+04/17/2015 08:11:01 PM INFO connected
+04/17/2015 08:11:01 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:01 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:01 PM INFO watch_session LOST
+04/17/2015 08:11:02 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:02 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:02 PM INFO watch_session CONNECTED
+04/17/2015 08:11:02 PM INFO connected
+04/17/2015 08:11:02 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:02 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:02 PM INFO watch_session LOST
+04/17/2015 08:11:03 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:03 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:03 PM INFO watch_session CONNECTED
+04/17/2015 08:11:03 PM INFO connected
+04/17/2015 08:11:03 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:03 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:03 PM INFO watch_session LOST
+04/17/2015 08:11:04 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:04 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:04 PM INFO watch_session CONNECTED
+04/17/2015 08:11:04 PM INFO connected
+04/17/2015 08:11:04 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:04 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:04 PM INFO watch_session LOST
+04/17/2015 08:11:05 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:05 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:05 PM INFO watch_session CONNECTED
+04/17/2015 08:11:05 PM INFO connected
+04/17/2015 08:11:05 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:05 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:05 PM INFO watch_session LOST
+04/17/2015 08:11:06 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:06 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:06 PM INFO watch_session CONNECTED
+04/17/2015 08:11:06 PM INFO connected
+04/17/2015 08:11:06 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:06 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:06 PM INFO watch_session LOST
+04/17/2015 08:11:07 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:07 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:07 PM INFO watch_session CONNECTED
+04/17/2015 08:11:07 PM INFO connected
+04/17/2015 08:11:07 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:07 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:07 PM INFO watch_session LOST
+04/17/2015 08:11:08 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:08 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:08 PM INFO watch_session CONNECTED
+04/17/2015 08:11:08 PM INFO connected
+04/17/2015 08:11:08 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:08 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:08 PM INFO watch_session LOST
+04/17/2015 08:11:09 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:09 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:09 PM INFO watch_session CONNECTED
+04/17/2015 08:11:09 PM INFO connected
+04/17/2015 08:11:09 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:09 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:09 PM INFO watch_session LOST
+04/17/2015 08:11:10 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:10 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:10 PM INFO watch_session CONNECTED
+04/17/2015 08:11:10 PM INFO connected
+04/17/2015 08:11:10 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:10 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:10 PM INFO watch_session LOST
+04/17/2015 08:11:11 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:11 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:11 PM INFO watch_session CONNECTED
+04/17/2015 08:11:11 PM INFO connected
+04/17/2015 08:11:11 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:11 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:11 PM INFO watch_session LOST
+04/17/2015 08:11:12 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:12 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:12 PM INFO watch_session CONNECTED
+04/17/2015 08:11:12 PM INFO connected
+04/17/2015 08:11:12 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:12 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:13 PM INFO watch_session LOST
+04/17/2015 08:11:14 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:14 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:14 PM INFO watch_session CONNECTED
+04/17/2015 08:11:14 PM INFO connected
+04/17/2015 08:11:14 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:14 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:14 PM INFO watch_session LOST
+04/17/2015 08:11:15 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:15 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:15 PM INFO watch_session CONNECTED
+04/17/2015 08:11:15 PM INFO connected
+04/17/2015 08:11:15 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:15 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:15 PM INFO watch_session LOST
+04/17/2015 08:11:16 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:16 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:16 PM INFO watch_session CONNECTED
+04/17/2015 08:11:16 PM INFO connected
+04/17/2015 08:11:16 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:16 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:16 PM INFO watch_session LOST
+04/17/2015 08:11:17 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:17 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:17 PM INFO watch_session CONNECTED
+04/17/2015 08:11:17 PM INFO connected
+04/17/2015 08:11:17 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:17 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:17 PM INFO watch_session LOST
+04/17/2015 08:11:18 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:18 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:18 PM INFO watch_session CONNECTED
+04/17/2015 08:11:18 PM INFO connected
+04/17/2015 08:11:18 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:18 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:18 PM INFO watch_session LOST
+04/17/2015 08:11:19 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:19 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:19 PM INFO watch_session CONNECTED
+04/17/2015 08:11:19 PM INFO connected
+04/17/2015 08:11:19 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:19 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:19 PM INFO watch_session LOST
+04/17/2015 08:11:20 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:20 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:20 PM INFO watch_session CONNECTED
+04/17/2015 08:11:20 PM INFO connected
+04/17/2015 08:11:20 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:20 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:20 PM INFO watch_session LOST
+04/17/2015 08:11:21 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:21 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:21 PM INFO watch_session CONNECTED
+04/17/2015 08:11:21 PM INFO connected
+04/17/2015 08:11:21 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:21 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:21 PM INFO watch_session LOST
+04/17/2015 08:11:22 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:22 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:22 PM INFO watch_session CONNECTED
+04/17/2015 08:11:22 PM INFO connected
+04/17/2015 08:11:22 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:22 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:22 PM INFO watch_session LOST
+04/17/2015 08:11:23 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:23 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:23 PM INFO watch_session CONNECTED
+04/17/2015 08:11:23 PM INFO connected
+04/17/2015 08:11:23 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:23 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:23 PM INFO watch_session LOST
+04/17/2015 08:11:24 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:24 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:24 PM INFO watch_session CONNECTED
+04/17/2015 08:11:24 PM INFO connected
+04/17/2015 08:11:24 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:24 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:24 PM INFO watch_session LOST
+04/17/2015 08:11:25 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:25 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:25 PM INFO watch_session CONNECTED
+04/17/2015 08:11:25 PM INFO connected
+04/17/2015 08:11:25 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:25 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:25 PM INFO watch_session LOST
+04/17/2015 08:11:26 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:26 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:26 PM INFO watch_session CONNECTED
+04/17/2015 08:11:26 PM INFO connected
+04/17/2015 08:11:26 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:26 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:26 PM INFO watch_session LOST
+04/17/2015 08:11:27 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:27 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:27 PM INFO watch_session CONNECTED
+04/17/2015 08:11:27 PM INFO connected
+04/17/2015 08:11:27 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:27 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:27 PM INFO watch_session LOST
+04/17/2015 08:11:28 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:28 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:28 PM INFO watch_session CONNECTED
+04/17/2015 08:11:28 PM INFO connected
+04/17/2015 08:11:28 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:28 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:28 PM INFO watch_session LOST
+04/17/2015 08:11:29 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:30 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:30 PM INFO watch_session CONNECTED
+04/17/2015 08:11:30 PM INFO connected
+04/17/2015 08:11:30 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:30 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:30 PM INFO watch_session LOST
+04/17/2015 08:11:31 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:31 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:31 PM INFO watch_session CONNECTED
+04/17/2015 08:11:31 PM INFO connected
+04/17/2015 08:11:31 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:31 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:31 PM INFO watch_session LOST
+04/17/2015 08:11:32 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:32 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:32 PM INFO watch_session CONNECTED
+04/17/2015 08:11:32 PM INFO connected
+04/17/2015 08:11:32 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:32 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:32 PM INFO watch_session LOST
+04/17/2015 08:11:33 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:33 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:33 PM INFO watch_session CONNECTED
+04/17/2015 08:11:33 PM INFO connected
+04/17/2015 08:11:33 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:33 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:33 PM INFO watch_session LOST
+04/17/2015 08:11:34 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:34 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:34 PM INFO watch_session CONNECTED
+04/17/2015 08:11:34 PM INFO connected
+04/17/2015 08:11:34 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:34 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:34 PM INFO watch_session LOST
+04/17/2015 08:11:35 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:35 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:35 PM INFO watch_session CONNECTED
+04/17/2015 08:11:35 PM INFO connected
+04/17/2015 08:11:35 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:35 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:35 PM INFO watch_session LOST
+04/17/2015 08:11:36 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:36 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:36 PM INFO watch_session CONNECTED
+04/17/2015 08:11:36 PM INFO connected
+04/17/2015 08:11:36 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:36 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:36 PM INFO watch_session LOST
+04/17/2015 08:11:37 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:37 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:37 PM INFO watch_session CONNECTED
+04/17/2015 08:11:37 PM INFO connected
+04/17/2015 08:11:37 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:37 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:37 PM INFO watch_session LOST
+04/17/2015 08:11:38 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:38 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:38 PM INFO watch_session CONNECTED
+04/17/2015 08:11:38 PM INFO connected
+04/17/2015 08:11:38 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:38 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:38 PM INFO watch_session LOST
+04/17/2015 08:11:39 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:39 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:39 PM INFO watch_session CONNECTED
+04/17/2015 08:11:39 PM INFO connected
+04/17/2015 08:11:39 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:39 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:39 PM INFO watch_session LOST
+04/17/2015 08:11:40 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:40 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:40 PM INFO watch_session CONNECTED
+04/17/2015 08:11:40 PM INFO connected
+04/17/2015 08:11:40 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:40 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:40 PM INFO watch_session LOST
+04/17/2015 08:11:41 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:41 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:41 PM INFO watch_session CONNECTED
+04/17/2015 08:11:41 PM INFO connected
+04/17/2015 08:11:41 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:41 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:41 PM INFO watch_session LOST
+04/17/2015 08:11:42 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:42 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:42 PM INFO watch_session CONNECTED
+04/17/2015 08:11:42 PM INFO connected
+04/17/2015 08:11:42 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:42 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:42 PM INFO watch_session LOST
+04/17/2015 08:11:43 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:43 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:43 PM INFO watch_session CONNECTED
+04/17/2015 08:11:43 PM INFO connected
+04/17/2015 08:11:43 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:43 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:43 PM INFO watch_session LOST
+04/17/2015 08:11:44 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:44 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:44 PM INFO watch_session CONNECTED
+04/17/2015 08:11:44 PM INFO connected
+04/17/2015 08:11:45 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:45 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:45 PM INFO watch_session LOST
+04/17/2015 08:11:46 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:46 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:46 PM INFO watch_session CONNECTED
+04/17/2015 08:11:46 PM INFO connected
+04/17/2015 08:11:46 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:46 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:46 PM INFO watch_session LOST
+04/17/2015 08:11:47 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:47 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:47 PM INFO watch_session CONNECTED
+04/17/2015 08:11:47 PM INFO connected
+04/17/2015 08:11:47 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:47 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:47 PM INFO watch_session LOST
+04/17/2015 08:11:48 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:48 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:48 PM INFO watch_session CONNECTED
+04/17/2015 08:11:48 PM INFO connected
+04/17/2015 08:11:48 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:48 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:48 PM INFO watch_session LOST
+04/17/2015 08:11:49 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:49 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:49 PM INFO watch_session CONNECTED
+04/17/2015 08:11:49 PM INFO connected
+04/17/2015 08:11:49 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:49 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:49 PM INFO watch_session LOST
+04/17/2015 08:11:50 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:50 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:50 PM INFO watch_session CONNECTED
+04/17/2015 08:11:50 PM INFO connected
+04/17/2015 08:11:50 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:50 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:50 PM INFO watch_session LOST
+04/17/2015 08:11:51 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:51 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:51 PM INFO watch_session CONNECTED
+04/17/2015 08:11:51 PM INFO connected
+04/17/2015 08:11:51 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:51 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:51 PM INFO watch_session LOST
+04/17/2015 08:11:52 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:52 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:52 PM INFO watch_session CONNECTED
+04/17/2015 08:11:52 PM INFO connected
+04/17/2015 08:11:52 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:52 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:52 PM INFO watch_session LOST
+04/17/2015 08:11:53 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:53 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:53 PM INFO watch_session CONNECTED
+04/17/2015 08:11:53 PM INFO connected
+04/17/2015 08:11:53 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:53 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:53 PM INFO watch_session LOST
+04/17/2015 08:11:54 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:54 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:54 PM INFO watch_session CONNECTED
+04/17/2015 08:11:54 PM INFO connected
+04/17/2015 08:11:54 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:54 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:54 PM INFO watch_session LOST
+04/17/2015 08:11:55 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:55 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:55 PM INFO watch_session CONNECTED
+04/17/2015 08:11:55 PM INFO connected
+04/17/2015 08:11:55 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:55 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:55 PM INFO watch_session LOST
+04/17/2015 08:11:56 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:56 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:56 PM INFO watch_session CONNECTED
+04/17/2015 08:11:56 PM INFO connected
+04/17/2015 08:11:56 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:56 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:56 PM INFO watch_session LOST
+04/17/2015 08:11:57 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:57 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:57 PM INFO watch_session CONNECTED
+04/17/2015 08:11:57 PM INFO connected
+04/17/2015 08:11:57 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:57 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:57 PM INFO watch_session LOST
+04/17/2015 08:11:58 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:58 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:58 PM INFO watch_session CONNECTED
+04/17/2015 08:11:58 PM INFO connected
+04/17/2015 08:11:58 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:58 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:58 PM INFO watch_session LOST
+04/17/2015 08:11:59 PM INFO Connecting to localhost:2181
+04/17/2015 08:11:59 PM INFO Zookeeper connection established, state: CONNECTED
+04/17/2015 08:11:59 PM INFO watch_session CONNECTED
+04/17/2015 08:11:59 PM INFO connected
+04/17/2015 08:11:59 PM INFO Closing connection to localhost:2181
+04/17/2015 08:11:59 PM INFO Zookeeper session lost, state: CLOSED
+04/17/2015 08:11:59 PM INFO watch_session LOST

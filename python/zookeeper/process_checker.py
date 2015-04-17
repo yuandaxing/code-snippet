@@ -1,5 +1,6 @@
 import subprocess
 import time
+import logging
 
 def findProcess(processName, port):
     ps= subprocess.Popen("ps -ef | grep " + processName + "| awk '{ print $NF }' | grep " + str(port),
@@ -14,7 +15,7 @@ def CheckRedis(processName, redis_port):
         try:
             return findProcess(processName, redis_port) == ''
         except  Exception as e:
-            print 'check iteration %d, exceptions: %s' % (idx, e)
+            logging(logging.ERROR, 'check iteration %d, exceptions: %s' % (idx, e))
             time.sleep(1)
     return False
 
