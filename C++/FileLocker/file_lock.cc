@@ -10,7 +10,6 @@ namespace MicroAd
 {
 namespace Utils
 {
-
 FileLocker::FileLocker(const std::string& filePath): path_(filePath),   \
                                                      fd_(-1){}
 bool FileLocker::Open()
