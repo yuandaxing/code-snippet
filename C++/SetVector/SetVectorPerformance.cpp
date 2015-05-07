@@ -4,6 +4,7 @@
 #include <set>
 #include <sys/time.h>
 #include <vector>
+#include <algorithm>
 
 using std::vector;
 using std::cout;
@@ -102,11 +103,29 @@ int main(int argc, char *argv[])
         find_count++;
       }
     }
+
     gettimeofday(&end, NULL);
     us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
     cout << "set search findCount " << find_count << std::endl;
     cout << "set search  cost time" << us << std::endl;
     cout << "---------------------------------------" << std::endl;
+
+
+    find_count = 0;
+    gettimeofday(&start, NULL);
+    for (vector<int>::iterator i = vi_test.begin(); i != vi_test.end(); ++i)
+    {
+      if(std::binary_search(vi.begin(), vi.end(), *i))
+      {
+        find_count++;
+      }
+    }
+    gettimeofday(&end, NULL);
+    us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+    cout << "system binary search findCount " << find_count << std::endl;
+    cout << "system binary search  cost time" << us << std::endl;
+    cout << "---------------------------------------" << std::endl;
+
   }
   return 0;
 }
