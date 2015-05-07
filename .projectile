@@ -1,0 +1,11 @@
+-*.pyc
+-*.out
+-*.exe
+-.git*
+-*.o
+-a
+-GPATH
+-GTAGS
+-GRTAGS
+-GSYMS
+-*.jpg
