@@ -28,9 +28,7 @@ private:
   string detail_;
   string debug_;
 };
-
 //usage
-
 Logger log(debug, detail);
 log.Write(DETAIL_T, "hello, world");
 log.Write(DEBUG_T, "this is the %dst debug", 1);

@@ -1,5 +1,6 @@
 import os
 import socket
+import re
 
 if os.name != "nt":
     import fcntl
@@ -17,6 +18,8 @@ def get_lan_ip():
             "eth0",
             "eth1",
             "eth2",
+            "bond0",
+            "bound1",
             "wlan0",
             "wlan1",
             "wifi0",
@@ -27,7 +30,8 @@ def get_lan_ip():
         for ifname in interfaces:
             try:
                 ip = get_interface_ip(ifname)
-                break
+                if re.match("\d{1,4}\.\d{1,4}\.\d{1,4}\.\d{1,4}", ip):
+                    break
             except IOError:
                 pass
     return ip

@@ -10,7 +10,7 @@ namespace MicroAd
 {
 namespace Utils
 {
-FileLocker::FileLocker(const std::string& filePath): path_(filePath), \
+FileLocker::FileLocker(const std::string& filePath): path_(filePath),   \
                                                      fd_(-1){}
 bool FileLocker::Open()
 {
@@ -60,6 +60,7 @@ bool FileLocker::UnLock()
   file_lock.l_whence = SEEK_SET;
   return 0 == fcntl(fd_, F_SETLK, &file_lock);
 }
+
 FileLocker::~FileLocker()
 {
   if(fd_ > 0)
