@@ -64,6 +64,51 @@ void BinaryIntersection(vector<int>& large, vector<int>& small, vector<int>& res
     }
   }
 }
+void Merge2(vector<int>& v1, vector<int>& v2, vector<int>& r)
+{
+  vector<int>::iterator it1 = v1.begin(), it2 = v2.begin();
+  while(it1 != v1.end() && it2 != v2.end())
+  {
+    if(*it1 > *it2)
+    {
+      r.push_back(*it2);
+      ++it2;
+    } else if (*it1 < *it2)
+    {
+      r.push_back(*it1);
+      ++it1;
+    } else
+    {
+      r.push_back(*it1);
+      ++it1;
+      ++it2;
+    }
+  }
+  while(it1 != v1.end())
+  {
+    r.push_back(*it1);
+    ++it1;
+  }
+  while(it2 != v2.end())
+  {
+    r.push_back(*it2);
+    ++it2;
+  }
+}
+void MergeVec(vector<vector<int> >& v2int, vector<int>& result)
+{
+  if(v2int.size() == 0) return ;
+  vector<int> temp1, temp2;
+  temp1.reserve(5000);
+  temp2.reserve(5000);
+  for(vector<vector<int> >::iterator it = v2int.begin(); it != v2int.end(); ++it)
+  {
+    Merge2(temp1, *it, temp2);
+    temp1.swap(temp2);
+    temp2.clear();
+  }
+  result.swap(temp1);
+}
 
 void FastIntersectSolution(vector<vector<int> >& v2int, vector<int>& result, double factor = 0.8)
 {
@@ -145,10 +190,14 @@ void PrintVec(vector<int>& vi)
   cout << std::endl;
 }
 
+
+///////////////////
+// main function //
+///////////////////
 int main(int argc, char *argv[])
 {
 
-  int base_size, maxV, vec_count = 10;
+  int base_size, maxV, vec_count = 20;
   double incr_fact;
   vector<vector<int> > vvi1(vec_count, vector<int>()), vvi2(vvi1);
   cout << "please input base_size(int), maxV(int), incr_fact(double)";
@@ -171,9 +220,9 @@ int main(int argc, char *argv[])
 
   vector<int> result;
   volatile VISIZETYPE size = 0;
-  int max_swap = pow(2, vec_count);
   for(int k = 0; k != 2; k++)
   {
+    int max_swap = pow(2, vec_count);
     {
       gettimeofday(&start, NULL);
       for(int i = 0; i != max_swap; i++)
@@ -208,6 +257,28 @@ int main(int argc, char *argv[])
       double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
       cout << "normal Intersection size: " << size << std::endl;
       cout << "normal Intersection cost time" << us << std::endl;
+    }
+
+    {
+      size = 0;
+      int result_size = 0;
+      gettimeofday(&start, NULL);
+      max_swap /= 1000;
+      for(int i = 0; i != max_swap ; i++)
+      {
+        CombinationSwap(vvi1, vvi2, i);
+        MergeVec(vvi1, result);
+        size += result.size();
+        result_size = result.size();
+        result.resize(0);
+        CombinationSwap(vvi1, vvi2, i);
+      }
+
+      gettimeofday(&end, NULL);
+      double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+      cout << "Merge  size: " << size << std::endl;
+      cout << "result size: " << result_size << std::endl;
+      cout << "Merge cost time" << us << std::endl;
     }
   }
   return 0;
