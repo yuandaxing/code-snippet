@@ -14,8 +14,6 @@ typedef vector<int>::iterator  VIITERATOR;
 typedef set<int>::size_type SISIZETYPE;
 
 
-
-
 void NormalIntersect(vector<int>& vec1, vector<int>& vec2, vector<int>& result)
 {
   for (VIITERATOR it1 = vec1.begin(), it2 = vec2.begin(); it1 != vec1.end() && it2 != vec2.end();)
@@ -126,7 +124,7 @@ void FastIntersectSolution(vector<vector<int> >& v2int, vector<int>& result, dou
     temp2.swap(temp1);
     temp1.clear();
 
-    if (temp2.size() * 2 * log(it->size()) / log(2) < it->size())
+    if ((temp2.size() << 4) < it->size())
     {
       BinaryIntersection(*it, temp2, temp1);
     } else
