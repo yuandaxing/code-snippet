@@ -177,8 +177,8 @@ void PrintVec(vector<int>& vi)
 int main(int argc, char *argv[])
 {
 
-  int base_size, maxV, vec_count = 10;
-  int base_vector_size = 100;
+  int base_size, maxV, vec_count = 20;
+  int base_vector_size = 10;
   double incr_fact;
   vector<vector<int> > vvi1(vec_count, vector<int>()), vvi2(vvi1);
   vector<int> A1;
@@ -207,7 +207,7 @@ int main(int argc, char *argv[])
   for(int k = 0; k != 2; k++)
   {
     int max_swap = pow(2, vec_count);
-    //    max_swap /= 1000;
+    max_swap /= 1000;
     {
       size = 0;
       cout << "----------------------------------------" << std::endl
