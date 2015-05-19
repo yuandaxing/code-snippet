@@ -34,39 +34,63 @@ void NormalIntersect(vector<int>& vec1, vector<int>& vec2, vector<int>& result)
 
 bool BinarySearch(vector<int>& large, int v, int i, int& result)
 {
-  int left = i, right = static_cast<int>(large.size() - 1); //(left, right]
+  int left = i, right = static_cast<int>(large.size()); //(left, right]
   while (left < right - 1)
   {
     VISIZETYPE mid = left +  ((right - left) >> 1);
-    if (large[mid] < v)
-    {
-      left = mid;
-    } else
+    if (large[mid] >= v)
     {
       right = mid;
+    } else
+    {
+      left = mid;
     }
   }
   result = right;
-  return right >= 0 && large[right] == v;
+  return right >= 0 && right < large.size() && large[right] == v;
 }
+
 void BinaryIntersection(vector<int>& large, vector<int>& small, vector<int>& result)
 {
   int pos = -1, occur = 0;
-  for (VIITERATOR it = small.begin(); it != small.end(); ++it)
+  int i = -1, j = 0;
+  int size1 = large.size(), size2 = small.size();
+  while (i < size1 && j < size2)
   {
-    if (BinarySearch(large, *it, pos, occur))
+    if (BinarySearch(large, small[j], i, occur))
     {
-      result.push_back(*it);
-      pos = occur;
+      result.push_back(small[j]);
+      i = occur+1;
+    } else
+    {
+      i = occur;
+    }
+
+    if ( i < size2 && BinarySearch(small, large[i], j, occur))
+    {
+      cout << "here";
+      result.push_back(large[j]);
+      j = occur + 1;
+    } else
+    {
+      j = occur;
     }
   }
+  // for (VIITERATOR it = small.begin(); it != small.end(); ++it)
+  // {
+  //   if (BinarySearch(large, *it, pos, occur))
+  //   {
+  //     result.push_back(*it);
+  //     pos = occur;
+  //   }
+  // }
 }
 
 void FastIntersect(vector<int>& v1, vector<int>& v2,
                    vector<int>& result, double factor = 0.8)
 {
   result.reserve(static_cast<int>(v1.size() * factor));
-  if ((v1.size() << 4) < v2.size())
+  if ((v1.size() << 3) < v2.size())
   {
     BinaryIntersection(v1, v2, result);
   } else
@@ -176,10 +200,10 @@ void PrintVec(vector<int>& vi)
 
 int main(int argc, char *argv[])
 {
-
   int base_size, maxV, vec_count = 20;
-  int base_vector_size = 10;
+  int base_vector_size = 100;
   double incr_fact;
+  double  us1 = 0, us2 = 0;
   vector<vector<int> > vvi1(vec_count, vector<int>()), vvi2(vvi1);
   vector<int> A1;
   cout << "please input base_size(int), maxV(int), incr_fact(double)";
@@ -222,9 +246,9 @@ int main(int argc, char *argv[])
         result.clear();
       }
       gettimeofday(&end, NULL);
-      double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+      us1 = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
       cout << "SimpleUnionIntersection size: " << size << std::endl;
-      cout << "SimpleUnionIntersection cost time" << us << "us" << std::endl;
+      cout << "SimpleUnionIntersection cost time" << us1 << "us" << std::endl;
       cout << "----------------------------------------" << std::endl;
       cout << std::endl;
     }
@@ -243,11 +267,12 @@ int main(int argc, char *argv[])
       }
 
       gettimeofday(&end, NULL);
-      double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+      us2 = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
       cout << "SmartUnionIntersection size: " << size << std::endl;
       cout << "SmartUnionIntersection cost time" << us << "us" << std::endl;
       cout << "----------------------------------------" << std::endl;
     }
+    cout << "ratios is " << (us1 / us2) << std::endl;
   }
 
   return 0;
