@@ -55,26 +55,20 @@ void BinaryIntersection(vector<int>& large, vector<int>& small, vector<int>& res
   int pos = -1, occur = 0;
   int i = -1, j = 0;
   int size1 = large.size(), size2 = small.size();
-  while (i < size1 && j < size2)
+  for (vector<int>::iterator it = small.begin(); it != small.end(); ++it)
   {
-    if (BinarySearch(large, small[j], i, occur))
+    if (BinarySearch(large, *it, i, occur))
     {
-      result.push_back(small[j]);
+      result.push_back(*it);
     }
-    i = occur + 1;
-
-    if ( i < size1 && BinarySearch(small, large[i], j, occur))
-    {
-      result.push_back(large[i]);
-    }
-    j = occur + 1;
+    i = occur;
   }
 }
 
 void FastIntersect(vector<int>& v1, vector<int>& v2,
                    vector<int>& result, double factor = 1)
 {
-  result.reserve(static_cast<int>(v1.size()));
+  result.reserve(static_cast<int>(v1.size() * factor));
   if ((v1.size() << 4) < v2.size())
   {
     BinaryIntersection(v1, v2, result);
@@ -135,13 +129,7 @@ void SmartUnionIntersection(vector<vector<int> >& Bs, vector<int>& A1, vector<in
   vector<vector<int> > rs(Bs.size(), vector<int>() );
   for(vector<vector<int> >::size_type i = 0; i != Bs.size(); ++i)
   {
-    if (A1.size() > Bs[i].size())
-    {
-      FastIntersect(A1, Bs[i], rs[i]);
-    } else
-    {
-      FastIntersect(Bs[i], A1, rs[i]);
-    }
+    FastIntersect(A1, Bs[i], rs[i]);
   }
 
   vector<int> temp1, temp2;
@@ -189,12 +177,46 @@ void PrintVec(vector<int>& vi)
   cout << std::endl;
 }
 
-
+void CopyInt(int a[], vector<int>& dest, int len = 10)
+{
+  for ( int i = 0; i < len; i++ )
+  {
+    if (0 != a[i])
+    {
+      dest.push_back(a[i]);
+    } else
+    {
+      return ;
+    }
+  }
+}
 
 int main(int argc, char *argv[])
 {
+
+  // int a[20][10] = {
+  //   {1, 2, 3, 4}, {1, 3, 4},
+  //             {1, 2, 3}, {3},
+  //             {1, 2, 3}, {0},
+  //             {1, 2, 3}, {-1},
+  //             {1, 2, 3}, {4},
+  //             {1}, {1, 2, 3,},
+  //             {3}, {1, 2, 3},
+  //             {0}, {1, 2, 3},
+  //             {-1}, {1, 2, 3},
+  //             {4}, {1, 2, 3}
+  // };
+  // for (int i = 0; i < sizeof(a) / sizeof(a[0]); i += 2)
+  // {
+  //   vector<int> v1, v2, result;
+  //   CopyInt(a[i], v1);
+  //   CopyInt(a[i+1], v2);
+  //   FastIntersect(v1, v2, result);
+  //   PrintVec(result);
+  // }
+
   int base_size, maxV, vec_count = 20;
-  int base_vector_size = 10;
+  int base_vector_size = 100;
   double incr_fact;
   double  us1 = 0, us2 = 0;
   vector<vector<int> > vvi1(vec_count, vector<int>()), vvi2(vvi1);
@@ -224,27 +246,6 @@ int main(int argc, char *argv[])
   {
     int max_swap = pow(2, vec_count);
     max_swap /= 1000;
-
-    {
-      size = 0;
-      cout << "----------------------------------------" << std::endl
-           << std::endl;
-      int count = 0;
-      gettimeofday(&start, NULL);
-      for(int i = 0; i != max_swap; i++)
-      {
-        CombinationSwap(vvi1, vvi2, i);
-        count += 1;
-        CombinationSwap(vvi1, vvi2, i);
-        result.clear();
-      }
-      gettimeofday(&end, NULL);
-      us1 = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-      cout << "count " << count << std::endl;
-      cout << "count cost time" << us1 << "us" << std::endl;
-      cout << "----------------------------------------" << std::endl;
-      cout << std::endl;
-    }
 
     {
       size = 0;
