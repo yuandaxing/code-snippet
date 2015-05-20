@@ -5,6 +5,7 @@
 #include <sys/time.h>
 #include <vector>
 #include <map>
+
 using std::vector;
 using std::cout;
 using std::cin;
@@ -25,6 +26,7 @@ void GenerateRandom(vector<int>& vi, SISIZETYPE size, int maxV)
   vector<int> temp(s.begin(), s.end());
   vi.swap(temp);
 }
+
 void GenerateMapRandom(map<int, int>& m, map<int, int>::size_type size,
                        int maxV)
 {
