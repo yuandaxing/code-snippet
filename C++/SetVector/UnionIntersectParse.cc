@@ -47,7 +47,7 @@ bool BinarySearch(vector<int>& large, int v, int i, int& result)
     }
   }
   result = left;
-  return left >= 0 && left < large.size() && large[left] == v;
+  return left >= 0 && large[left] == v;
 }
 
 void BinaryIntersection(vector<int>& large, vector<int>& small, vector<int>& result)
