@@ -44,10 +44,10 @@ void GenerateRandom(vector<int64_t>& vi, int size, int maxV)
   // {
   //   s.insert(rand() % maxV);
   // }
-for(int i = 0; i != size; i++)
- {
-s.insert(i);
-}
+  for(int i = 0; i != size; i++)
+  {
+    s.insert(i);
+  }
   vector<int64_t> temp(s.begin(), s.end());
   vi.swap(temp);
 }
@@ -65,21 +65,21 @@ int main(int argc, char *argv[])
   GenerateRandom(result, find_count, max_v);
   set<int64_t> set(temp.begin(), temp.end());
   unordered_set<int64_t> hashset(temp.begin(), temp.end());
-hashset.max_load_factor(0.1);
-for(int i = 0; i < 2; i++)
+  //  hashset.max_load_factor(0.1);
+  for(int i = 0; i < 2; i++)
   {
-      timeval start, end;
-      gettimeofday(&start, NULL);
-      cout << "hash result:" << find_unordered_set(hashset, result) << std::endl;
-      gettimeofday(&end, NULL);
-      double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-cout << "hash take time " << us << "load_factor" << hashset.load_factor() <<  std::endl << std::endl;
+    timeval start, end;
+    gettimeofday(&start, NULL);
+    cout << "hash result:" << find_unordered_set(hashset, result) << std::endl;
+    gettimeofday(&end, NULL);
+    double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+    cout << "hash take time: " << us << " load_factor: " << hashset.load_factor() <<  std::endl << std::endl;
 
-      gettimeofday(&start, NULL);
-      cout << "set result:" << find_set(set, result) << std::endl;
-      gettimeofday(&end, NULL);
-      us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-      cout << "set take time " << us << std::endl << std::endl;
+    gettimeofday(&start, NULL);
+    cout << "set result:" << find_set(set, result) << std::endl;
+    gettimeofday(&end, NULL);
+    us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
+    cout << "set take time: " << us << std::endl << std::endl;
   }
 
   return 0;

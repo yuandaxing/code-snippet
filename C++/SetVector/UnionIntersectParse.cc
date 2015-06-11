@@ -117,7 +117,6 @@ void Merge2(vector<int>& v1, vector<int>& v2, vector<int>& r)
     ++it2;
   }
 }
-
 void SimpleUnionIntersection(vector<vector<int> >& Bs, vector<int>& A1, vector<int>& result)
 {
   vector<int> temp1, temp2;

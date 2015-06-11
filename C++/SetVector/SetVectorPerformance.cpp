@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 
   vector<int> vi;
   GenerateRandom(vi, size, maxV);
-  cout << "finish generate set and vector numbers" << std::endl;
+  cout << "finish generate set and vector numbers: " << std::endl;
   set<int> si(vi.begin(), vi.end());
   int num_of_count = 5000000;
   vector<int> vi_test;
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
   //  GenerateRandom(vi_test, num_of_count, num_of_count*50);
   GenerateRandom(vi_test, num_of_count, num_of_count*50);
 
-  cout << "finish of generate random numbers" << std::endl;
+  cout << "finish of generate random numbers: " << std::endl;
   timeval start, end;
   int result = 0, find_count = 0; //dummy
   for(int k = 0; k != 2; k++)
@@ -91,8 +91,8 @@ int main(int argc, char *argv[])
 
     gettimeofday(&end, NULL);
     double us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-    cout << "binary search findCount " << find_count << std::endl;
-    cout << "binary search  cost time" << us << std::endl;
+    cout << "binary search findCount: " << find_count << std::endl;
+    cout << "binary search  cost time: " << us << std::endl;
     cout << "---------------------------------------" << std::endl;
     find_count = 0;
     gettimeofday(&start, NULL);
@@ -106,8 +106,8 @@ int main(int argc, char *argv[])
 
     gettimeofday(&end, NULL);
     us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-    cout << "set search findCount " << find_count << std::endl;
-    cout << "set search  cost time" << us << std::endl;
+    cout << "set search findCount:  " << find_count << std::endl;
+    cout << "set search  cost time: " << us << std::endl;
     cout << "---------------------------------------" << std::endl;
 
 
@@ -122,8 +122,8 @@ int main(int argc, char *argv[])
     }
     gettimeofday(&end, NULL);
     us = (end.tv_sec - start.tv_sec)*1000000 + (end.tv_usec - start.tv_usec);
-    cout << "system binary search findCount " << find_count << std::endl;
-    cout << "system binary search  cost time" << us << std::endl;
+    cout << "system binary search findCount: " << find_count << std::endl;
+    cout << "system binary search  cost time: " << us << std::endl;
     cout << "---------------------------------------" << std::endl;
 
   }
