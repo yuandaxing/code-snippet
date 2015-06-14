@@ -10,8 +10,8 @@ namespace MicroAd
 namespace Utils
 {
 enum ParamType {BOOL_T, INT32_T, INT64_T, STRING_T };
-
 enum ValSrc {DEFAULT, COMMAND, WEB};
+
 struct ParamInfo
 {
   ParamType paramType_;
@@ -20,6 +20,7 @@ struct ParamInfo
   bool mutable_;
   ValSrc valSrc_;
   void *ptr_;
+
   ParamInfo():paramType_(BOOL_T), name_(""), desc_(""), mutable_(false), valSrc_(DEFAULT), \
               ptr_(NULL){}
   ParamInfo(ParamType pt, const char* name, const char* desc, bool alter, void *ptr):
@@ -28,6 +29,7 @@ struct ParamInfo
   ParamInfo(const ParamInfo& pi): paramType_(pi.paramType_), name_(pi.name_), desc_(pi.desc_), \
                                   mutable_(pi.mutable_), valSrc_(pi.valSrc_), ptr_(pi.ptr_){}
 };
+
 class ParamRepository
 {
 public:
@@ -38,8 +40,7 @@ public:
   bool CreateBool(const char* name, const char* val, const char* desc, bool alter, void* ptr);
   bool SetValue(const std::string& name, const std::string& val, const ValSrc vs);
   bool TableInfo(std::string& info);
-
-  ParamInfo Get(const std::string& key)
+  ParamInfo Get(const std::string& key);
   {
     MutexGuard guard(&ParamRepository::lock_);
     if(paramPool_.find(key) != paramPool_.end())
@@ -48,6 +49,7 @@ public:
     }
     return ParamInfo();
   }
+
 private:
   ParamRepository(){}
   ParamRepository(const ParamRepository&);

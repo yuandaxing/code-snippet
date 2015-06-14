@@ -7,6 +7,7 @@ namespace MicroAd
 {
 namespace Utils
 {
+
 int RequestMgr::Process(const char* url, struct MHD_Connection* conn, std::string& result)
 {
   std::cout << std::endl << "process" << std::endl;
@@ -85,6 +86,7 @@ int RequestMgr::Param(struct MHD_Connection* conn, std::string& result)
   result.append(HTMLEND);
   return ret;
 }
+
 int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn, std::string& result)
 {
   //Todo
@@ -107,6 +109,7 @@ int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn,
         setOps = "<p>Set operation success</p>";
     }
     ParamInfo pi = ParamRepository::Instance()->Get(key);
+
     std::ostringstream content;
     result.append(HTMLBEGIN("UPDATE"));
     result.append(setOps);

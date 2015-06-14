@@ -1,0 +1,96 @@
+Auto-saving...done
+Mark set [2 times]
+Indenting region... done
+Auto-saving...done
+Saving file /home/daxing/code/code-snippet/C++/random_shuffle/test_rand.cc...
+Wrote /home/daxing/code/code-snippet/C++/random_shuffle/test_rand.cc
+Failed: update TAGS(2)
+(No changes need to be saved)
+File C++/MicroAd/Cache/base.h added to project /home/daxing/code/code-snippet/ cache.
+(No changes need to be saved)
+byte-code: End of buffer [2 times]
+Auto-saving...done
+Mark set
+Replaced 4 occurrences
+Mark set [2 times]
+Replaced 3 occurrences
+Auto-saving...done
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/Cache/base.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/Cache/base.h
+Failed: update TAGS(2)
+Auto-saving...done
+Auto-saving...done
+Auto-saving...done
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/Cache/base.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/Cache/base.h
+Failed: update TAGS(2)
+Quit
+byte-code: Command attempted to use minibuffer while in minibuffer
+Quit
+(No changes need to be saved)
+Mark set
+Mark saved where search started [5 times]
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Mark saved where search started
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+Mark saved where search started
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Mark saved where search started [2 times]
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Mark saved where search started
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+(No changes need to be saved)
+Mark saved where search started
+Auto-saving...done
+Quit
+Mark saved where search started
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+Mark saved where search started
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Mark saved where search started [2 times]
+Mark set [2 times]
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Failed: update TAGS(2)
+(No changes need to be saved)
+Saving file /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h...
+Wrote /home/daxing/code/code-snippet/C++/MicroAd/HttpServ/ad_common.h
+Type a prefix key to toggle it. Run 'actions' with their prefixes. '?' for more help. [2 times]
+Running git commit --
+[yas] Loading for `git-commit-mode', just-in-time: (lambda nil (yas--load-directory-1 (quote /home/daxing/.emacs.d/elpa/yasnippet-20141223.303/snippets/git-commit-mode) (quote git-commit-mode)))!
+[yas] Loading compiled snippets from /home/daxing/.emacs.d/elpa/yasnippet-20141223.303/snippets/git-commit-mode
+When done with a buffer, type C-c C-c
+Type C-c C-c to commit (C-c C-k to abort).
+Saving file /home/daxing/code/code-snippet/.git/COMMIT_EDITMSG...
+Wrote /home/daxing/code/code-snippet/.git/COMMIT_EDITMSG
+Git finished
+Type a prefix key to toggle it. Run 'actions' with their prefixes. '?' for more help.
+Running git push -v origin master:refs/heads/master
+failed to push some refs to 'git@github.com:yuandaxing/code-snippet.git' ... [See buffer *magit-process* for details]
+Type a prefix key to toggle it. Run 'actions' with their prefixes. '?' for more help.
+Running git push -v origin master:refs/heads/master
+failed to push some refs to 'git@github.com:yuandaxing/code-snippet.git' ... [See buffer *magit-process* for details]
+Type a prefix key to toggle it. Run 'actions' with their prefixes. '?' for more help.
+Running git pull
+Git finished
+Type a prefix key to toggle it. Run 'actions' with their prefixes. '?' for more help.
+Running git push -v origin master:refs/heads/master
+Git finished
+(No changes need to be saved)
+Quit

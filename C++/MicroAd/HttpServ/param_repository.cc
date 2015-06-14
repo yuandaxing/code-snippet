@@ -10,6 +10,16 @@ namespace Utils
 pthread_mutex_t ParamRepository::lock_ = PTHREAD_MUTEX_INITIALIZER;
 ParamRepository* ParamRepository::instance_ = NULL;
 
+ParamInfo ParamRepository::Get(const std::string& key)
+{
+  MutexGuard guard(&ParamRepository::lock_);
+  if(paramPool_.find(key) != paramPool_.end())
+  {
+    return paramPool_[key];
+  }
+  return ParamInfo();
+}
+
 int32_t ParamRepository::CreateInt32(const char* name, const char* val, 
                                      const char* desc, bool alter, void* ptr)
 {
@@ -90,6 +100,7 @@ bool ParamRepository::SetValue(const std::string& name, const std::string& val, 
   }
   return false;
 }
+
 ParamRepository* ParamRepository::Instance()
 {
   if(NULL == instance_)
@@ -146,6 +157,7 @@ bool ParamRepository::TableInfo(std::string& info)
   info.append(ss.str());
   return true;
 }
+
 }
 }
 
