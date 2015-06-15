@@ -5,6 +5,9 @@
  */
 #ifndef MICROAD_HTTPSERVER_MONITOR_H_
 #define MICROAD_HTTPSERVER_MONITOR_H_
+#include <string>
+#include <list>
+#include <tbb/concurrent_hash_map>
 
 namespace MicroAd
 {
@@ -43,18 +46,16 @@ public:
   void InitOrIncr(const string& key, int64_t);
   void Detail(const string& key, string& content);
   void Summary(string& content);
+  void Set(const string& key, const string& val);
 
 private:
   using std::string;
   using tbb:concurrent_hash_map;
 
-  concurrent_hash_map<string, MonitorType*> data_;
+  concurrent_hash_map<string, MonitorType*> monitor_data_;
+  concurrent_hash_map<string, string> key_val_;
 };
 }
 }
-
-
-
-
 
 #endif // MICROAD_HTTPSERVER_MONITOR_H_
