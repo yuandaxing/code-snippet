@@ -13,28 +13,38 @@ namespace Utils
 class MonitorType
 {
 public:
-  void Incr(int64_t v) = 0;
-  void InitOrIncr(int64_t v) = 0;
+  virtual void Incr(int64_t v) = 0;
+  virtual MonitorType* Create() = 0;
+  virtual void Add(MonitorType* mt) = 0;
 };
 
 class AverageMonitor: public MonitorType
 {
-
+public:
+  void Incr(int64_t v);
+  MonitorType* Create();
+private:
+  int64_t count_, value_;
 };
 
 class QpsMonitor: public MonitorType
 {
 
 };
-
+/**
+ * the basic algorithm is to check the current time
+ */
 class Calendar
 {
 public:
-
+  void Update(time_t t);
 private:
-  enum {SECONDS=0, }
+  void Resize(list<MonitorType*> list_monitor, std::size_t);
 
-}
+  enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4};
+  MonitorType* cur_[SIZE];
+  list<MonitorType*> last_60_seconds_, last_60_minutes_, last_24_hours_, last_10_days_;
+};
 
 class Monitor
 {
