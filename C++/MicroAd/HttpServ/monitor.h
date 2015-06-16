@@ -19,20 +19,29 @@ public:
   virtual void Incr(int64_t v) = 0;
   virtual MonitorType* Create() = 0;
   virtual void Add(MonitorType* mt) = 0;
+  virtual ~MonitorType(){}
 };
 
 class AverageMonitor: public MonitorType
 {
 public:
+  AverageMonitor();
   void Incr(int64_t v);
   MonitorType* Create();
+  void Add(MonitorType* mt);
 private:
   int64_t count_, value_;
 };
 
 class QpsMonitor: public MonitorType
 {
-
+public:
+  QpsMonitor();
+  virtual void Incr(int64_t v) = 0;
+  virtual MonitorType* Create() = 0;
+  virtual void Add(MonitorType* mt) = 0;
+private:
+  int64_t count_;
 };
 /**
  * the basic algorithm is to check the current time

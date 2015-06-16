@@ -1,7 +1,52 @@
+#include "monitor.h"
 namespace MicroAd
 {
 namespace Utils
 {
+AverageMonitor::AverageMonitor():
+  count_(0), value_(0)
+{
+}
+void AverageMonitor::Incr(int64_t v)
+{
+  ++count_;
+  value_ += v;
+}
+MonitorType* AverageMonitor::Create()
+{
+  return new AverageMonitor();
+}
+void AverageMonitor::Add(MonitorType *mt)
+{
+  AverageMonitor* am = dynamic_cast<AverageMonitor*>(mt);
+  if (NULL == am)
+  {
+    throw std::runtime_error("not AverageMonitor type");
+  }
+  count_ += am->count_;
+  value_ += am->value_;
+}
+QpsMonitor::QpsMonitor(): count_(0)
+{
+}
+void QpsMonitor::Incr(int64_t v)
+{
+  count_ += v;
+}
+QpsMonitor* QpsMonitor::Create()
+{
+  return new QpsMonitor();
+}
+void QpsMonitor::Add(MonitorType *mt)
+{
+  QpsMonitor* qm = dynamic_cast<QpsMonitor*>(mt);
+  if (NULL == qm)
+  {
+    throw std::runtime_error("not QpsMonitor type");
+  }
+  count_ += qm->count_;
+}
+
 void Calendar::Resize(list<MonitorType*> list_monitor, std::size_t size)
 {
   while (list_monitor.size() > size)
