@@ -1,0 +1,40 @@
+namespace MicroAd
+{
+namespace Utils
+{
+void Calendar::Resize(list<MonitorType*> list_monitor, std::size_t size)
+{
+  while (list_monitor.size() > size)
+  {
+    delete list_monitor.front();
+    list_monitor.pop_front();
+  }
+}
+void Calendar::Update(const  t)
+{
+  struct tm;
+  gmtime_r(&t, &tm);
+  MonitorType* cur_monitor = cur_[SECOND];
+  cur_[SECOND] = cur_monitor.Create();
+  last_60_seconds_.push_back(cur_monitor);
+  Resize(last_60_seconds_, 60);
+  cur_[MINUTE]->Add(cur_monitor);
+  cur_monitor = cur_[MINUTE];
+
+  if (tm.gmt_sec == 0)
+  {
+    last_60_minutes_.push_back(cur_monitor);
+    Resize(last_60_minutes_, 60);
+    cur_monitor = cur_[MINUTE];
+    cur_[MINUTE] = cur_monitor.Create();
+  }
+
+  if (tm.gmt_min == 0)
+  {
+
+  }
+}
+
+
+}
+}
