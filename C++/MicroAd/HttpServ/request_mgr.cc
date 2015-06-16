@@ -78,7 +78,8 @@ int RequestMgr::Param(struct MHD_Connection* conn, std::string& result)
   if(ParamRepository::Instance()->TableInfo(content))
   {
     result += content;
-  } else
+  }
+  else
   {
     result += "<p>Error</p>";
     ret = -1;
@@ -96,12 +97,13 @@ int RequestMgr::UpdateParam(const std::string& url, struct MHD_Connection* conn,
   if(splits.size() < 3)
   {
     return -1;
-  } else
+  }
+  else
   {
     std::string key = splits[3];
     std::string setOps;
     const char* val = MHD_lookup_connection_value(conn, MHD_GET_ARGUMENT_KIND, key.c_str());
-    if(NULL != val)
+    if (NULL != val)
     {
       if(!ParamRepository::Instance()->SetValue(key, val, ValSrc::WEB))
         setOps = "<p>Set operation failed</p>";
