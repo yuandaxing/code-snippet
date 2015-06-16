@@ -51,8 +51,9 @@ void Calendar::Resize(list<MonitorType*> list_monitor, std::size_t size)
 {
   while (list_monitor.size() > size)
   {
-    delete list_monitor.front();
+    MonitorType *mt = list_monitor.front();
     list_monitor.pop_front();
+    delete mt;
   }
 }
 void Calendar::Update(const  t)
