@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <pthread.h>
-#include <list>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,8 +15,8 @@ using std::list;
 using std::string;
 using std::vector;
 using tbb::concurrent_bounded_queue;
-typedef void (*task_routine)(void* arg);
 
+typedef void (*task_routine)(void* arg);
 class MutexGuard
 {
 public:
@@ -33,10 +32,9 @@ private:
   // No copying allowed
   MutexGuard(const MutexGuard&);
   void operator=(const MutexGuard&);
+
   pthread_mutex_t *const mu_;
 };
-
-
 
 class ThreadManager
 {
@@ -69,13 +67,12 @@ private:
   const int thread_num_;
   concurrent_bounded_queue<Task> tasks_;
   vector<pthread_t> thread_ids_;
-  //  pthread_mutex_t mutex_;
   string name_;
 };
 
 ThreadManager::ThreadManager(int thread_num, const string& manager_name,
                              int task_capacity) :
-  running_(false), thread_num_(thread_num) /*mutex_(PTHREAD_MUTEX_INITIALIZER)*/
+  running_(false), thread_num_(thread_num)
 {
   name_ = manager_name;
   tasks_.set_capacity(task_capacity);
@@ -99,7 +96,6 @@ void ThreadManager::Stop()
 
 void ThreadManager::AddTask(task_routine routine, void* arg)
 {
-  //MutexGuard m(&mutex_);
   tasks_.push(Task(arg, routine));
 }
 
@@ -108,13 +104,7 @@ void ThreadManager::Worker()
   while (running_)
   {
     Task t;
-    // {
-    //   MutexGuard m(&mutex_);
-    //         tasks_.pop_front();
-    //   }
-    // }
     tasks_.pop(t);
-
     if (t.routine_)
     {
       t.routine_(t.arg_);
