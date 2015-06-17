@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <tbb/concurrent_queue.h>
+
 using std::cout;
 using std::set;
 using std::list;
@@ -44,7 +45,6 @@ public:
   void Start();
   void Stop();
   void AddTask(task_routine routine, void* arg);
-
 
 private:
   void Worker();
