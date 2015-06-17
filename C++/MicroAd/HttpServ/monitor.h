@@ -46,7 +46,7 @@ private:
 /**
  * the basic algorithm is to check the current time
  */
-class Calendar
+struct Calendar
 {
 public:
   void Update(time_t t);
@@ -74,6 +74,7 @@ private:
   concurrent_hash_map<string, MonitorType*> monitor_data_;
   concurrent_hash_map<string, string> key_val_;
 };
+
 }
 }
 

@@ -22,12 +22,54 @@ public:
     pthread_mutex_unlock(mu_);
   }
 private:
-    // No copying allowed
+  // No copying allowed
   MutexGuard(const MutexGuard&);
   void operator=(const MutexGuard&);
   pthread_mutex_t *const mu_;
 };
 
+class ScopeSpinlock
+{
+public:
+  ScopeSpinlock(pthread_spinlock_t * lock)
+  {
+    lock_ = lock;
+    pthread_spin_lock(lock_);
+  }
+
+  ~ScopeSpinlock()
+  {
+    pthread_spin_unlock(lock_);
+  }
+
+private:
+  pthread_spinlock_t * lock_;
+};
+
+class ScopeRwlock
+{
+public:
+  ScopeRwlock(pthread_rwlock_t * lock, bool is_readlock)
+  {
+    lock_ = lock;
+    if (is_readlock)
+    {
+      pthread_rwlock_rdlock(lock_);
+    }
+    else
+    {
+      pthread_rwlock_wrlock(lock_);
+    }
+  }
+
+  ~ScopeRwlock()
+  {
+    pthread_rwlock_unlock(lock_);
+  }
+
+private:
+  pthread_rwlock_t * lock_;
+};
 
 
 /*
