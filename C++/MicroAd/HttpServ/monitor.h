@@ -46,12 +46,10 @@ private:
 /**
  * the basic algorithm is to check the current time
  */
-class Calendar
+struct Calendar
 {
-public:
-  void Update(time_t t);
-private:
-  void Resize(list<MonitorType*> list_monitor, std::size_t);
+  Calendar(MonitorType* mt);
+  static void Resize(list<MonitorType*> list_monitor, std::size_t);
 
   enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4};
   MonitorType* cur_[SIZE];

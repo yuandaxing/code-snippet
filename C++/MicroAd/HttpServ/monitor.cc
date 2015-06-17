@@ -47,6 +47,19 @@ void QpsMonitor::Add(MonitorType *mt)
   count_ += qm->count_;
 }
 
+struct Calendar::Calendar(MonitorType* mt)
+{
+  if (NULL == mt)
+  {
+    throw std::runtime_error("monitorType NULL");
+  }
+  for (std::size_t i = 0; i != SIZE; ++i)
+  {
+    cur[i] == mt->Create();
+  }
+  delete mt;
+}
+
 void Calendar::Resize(list<MonitorType*> list_monitor, std::size_t size)
 {
   while (list_monitor.size() > size)
@@ -56,7 +69,8 @@ void Calendar::Resize(list<MonitorType*> list_monitor, std::size_t size)
     delete mt;
   }
 }
-void Calendar::Update(const  t)
+
+void Update(const  t)
 {
   struct tm;
   gmtime_r(&t, &tm);
