@@ -9,12 +9,13 @@
 #include <set>
 #include <stdlib.h>
 #include <algorithm>
-
+#include <tbb/concurrent_queue.h>
 using std::cout;
 using std::set;
 using std::list;
 using std::string;
 using std::vector;
+using tbb::concurrent_bounded_queue;
 typedef void (*task_routine)(void* arg);
 
 class MutexGuard
@@ -40,7 +41,8 @@ private:
 class ThreadManager
 {
 public:
-  ThreadManager(int thread_num, const string& manager_name);
+  ThreadManager(int thread_num, const string& manager_name,
+                int task_capacity = 100000);
   void Start();
   void Stop();
   void AddTask(task_routine routine, void* arg);
@@ -65,16 +67,18 @@ private:
 
   bool running_;
   const int thread_num_;
-  list<Task> tasks_;
+  concurrent_bounded_queue<Task> tasks_;
   vector<pthread_t> thread_ids_;
-  pthread_mutex_t mutex_;
+  //  pthread_mutex_t mutex_;
   string name_;
 };
 
-ThreadManager::ThreadManager(int thread_num, const string& manager_name) :
-  running_(false), thread_num_(thread_num), mutex_(PTHREAD_MUTEX_INITIALIZER)
+ThreadManager::ThreadManager(int thread_num, const string& manager_name,
+                             int task_capacity) :
+  running_(false), thread_num_(thread_num) /*mutex_(PTHREAD_MUTEX_INITIALIZER)*/
 {
   name_ = manager_name;
+  tasks_.set_capacity(task_capacity);
 }
 
 void ThreadManager::Start()
@@ -95,8 +99,8 @@ void ThreadManager::Stop()
 
 void ThreadManager::AddTask(task_routine routine, void* arg)
 {
-  MutexGuard m(&mutex_);
-  tasks_.push_back(Task(arg, routine));
+  //MutexGuard m(&mutex_);
+  tasks_.push(Task(arg, routine));
 }
 
 void ThreadManager::Worker()
@@ -104,14 +108,13 @@ void ThreadManager::Worker()
   while (running_)
   {
     Task t;
-    {
-      MutexGuard m(&mutex_);
-      if (!tasks_.empty())
-      {
-        t = tasks_.front();
-        tasks_.pop_front();
-      }
-    }
+    // {
+    //   MutexGuard m(&mutex_);
+    //         tasks_.pop_front();
+    //   }
+    // }
+    tasks_.pop(t);
+
     if (t.routine_)
     {
       t.routine_(t.arg_);
@@ -148,7 +151,7 @@ void GenerateRandom(vector<int>& vi, int size, int maxV)
 int customize_rand( std::size_t k)
 {
   unsigned int x = 0;
-  return rand() % k;
+  return rand_r(&x) % k;
 }
 void random(void* data)
 {
