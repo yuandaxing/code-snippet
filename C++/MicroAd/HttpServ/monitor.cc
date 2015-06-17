@@ -7,15 +7,18 @@ AverageMonitor::AverageMonitor():
   count_(0), value_(0)
 {
 }
+
 void AverageMonitor::Incr(int64_t v)
 {
   ++count_;
   value_ += v;
 }
+
 MonitorType* AverageMonitor::Create()
 {
   return new AverageMonitor();
 }
+
 void AverageMonitor::Add(MonitorType *mt)
 {
   AverageMonitor* am = dynamic_cast<AverageMonitor*>(mt);
@@ -26,6 +29,7 @@ void AverageMonitor::Add(MonitorType *mt)
   count_ += am->count_;
   value_ += am->value_;
 }
+
 QpsMonitor::QpsMonitor(): count_(0)
 {
 }

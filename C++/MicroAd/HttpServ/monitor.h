@@ -72,6 +72,7 @@ private:
   concurrent_hash_map<string, MonitorType*> monitor_data_;
   concurrent_hash_map<string, string> key_val_;
 };
+
 }
 }
 
