@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <pthread.h>
-#include <list>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -9,14 +8,16 @@
 #include <set>
 #include <stdlib.h>
 #include <algorithm>
+#include <tbb/concurrent_queue.h>
 
 using std::cout;
 using std::set;
 using std::list;
 using std::string;
 using std::vector;
-typedef void (*task_routine)(void* arg);
+using tbb::concurrent_bounded_queue;
 
+typedef void (*task_routine)(void* arg);
 class MutexGuard
 {
 public:
@@ -32,19 +33,18 @@ private:
   // No copying allowed
   MutexGuard(const MutexGuard&);
   void operator=(const MutexGuard&);
+
   pthread_mutex_t *const mu_;
 };
-
-
 
 class ThreadManager
 {
 public:
-  ThreadManager(int thread_num, const string& manager_name);
+  ThreadManager(int thread_num, const string& manager_name,
+                int task_capacity = 100000);
   void Start();
   void Stop();
   void AddTask(task_routine routine, void* arg);
-
 
 private:
   void Worker();
@@ -65,16 +65,17 @@ private:
 
   bool running_;
   const int thread_num_;
-  list<Task> tasks_;
+  concurrent_bounded_queue<Task> tasks_;
   vector<pthread_t> thread_ids_;
-  pthread_mutex_t mutex_;
   string name_;
 };
 
-ThreadManager::ThreadManager(int thread_num, const string& manager_name) :
-  running_(false), thread_num_(thread_num), mutex_(PTHREAD_MUTEX_INITIALIZER)
+ThreadManager::ThreadManager(int thread_num, const string& manager_name,
+                             int task_capacity) :
+  running_(false), thread_num_(thread_num)
 {
   name_ = manager_name;
+  tasks_.set_capacity(task_capacity);
 }
 
 void ThreadManager::Start()
@@ -95,8 +96,7 @@ void ThreadManager::Stop()
 
 void ThreadManager::AddTask(task_routine routine, void* arg)
 {
-  MutexGuard m(&mutex_);
-  tasks_.push_back(Task(arg, routine));
+  tasks_.push(Task(arg, routine));
 }
 
 void ThreadManager::Worker()
@@ -104,14 +104,7 @@ void ThreadManager::Worker()
   while (running_)
   {
     Task t;
-    {
-      MutexGuard m(&mutex_);
-      if (!tasks_.empty())
-      {
-        t = tasks_.front();
-        tasks_.pop_front();
-      }
-    }
+    tasks_.pop(t);
     if (t.routine_)
     {
       t.routine_(t.arg_);
@@ -148,7 +141,11 @@ void GenerateRandom(vector<int>& vi, int size, int maxV)
 int customize_rand( std::size_t k)
 {
   unsigned int x = 0;
+<<<<<<< HEAD:C++/multithread/product_consume.cc
   return rand_r() % k;
+=======
+  return rand_r(&x) % k;
+>>>>>>> 5deb335f8d2e9e06b65e55cb3ca674b004688cf0:C++/multithread/producer_consumer.cc
 }
 void random(void* data)
 {
