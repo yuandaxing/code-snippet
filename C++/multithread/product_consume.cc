@@ -148,7 +148,7 @@ void GenerateRandom(vector<int>& vi, int size, int maxV)
 int customize_rand( std::size_t k)
 {
   unsigned int x = 0;
-  return rand() % k;
+  return rand_r() % k;
 }
 void random(void* data)
 {
