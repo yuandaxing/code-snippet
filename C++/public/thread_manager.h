@@ -6,30 +6,35 @@
 
 #ifndef PUBLIC_THREAD_MANAGER_H_
 #define PUBLIC_THREAD_MANAGER_H_
+
 #include <unistd.h>
 #include <pthread.h>
-#include <list>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <sys/time.h>
 #include <time.h>
-#include <set>
 #include <stdlib.h>
 #include <algorithm>
+#include <tbb/concurrent_queue.h>
+
+namespace micro_ad
+{
+namespace utils
 
 using std::string;
 using std::vector;
+using tbb::concurrent_bounded_queue;
+
 typedef void (*task_routine)(void* arg);
 
 class ThreadManager
 {
 public:
-  ThreadManager(int thread_num, const string& manager_name);
+  ThreadManager(int thread_num, const string& manager_name, const int tasks_limit = 1000000);
   void Start();
   void Stop();
   void AddTask(task_routine routine, void* arg);
-
 
 private:
   void Worker();
@@ -50,15 +55,16 @@ private:
 
   bool running_;
   const int thread_num_;
-  list<Task> tasks_;
+  concurrent_bounded_queue<Task> tasks_;
   vector<pthread_t> thread_ids_;
   string name_;
 };
 
-ThreadManager::ThreadManager(int thread_num, const string& manager_name) :
+ThreadManager::ThreadManager(int thread_num, const string& manager_name, int task_limit) :
   running_(false), thread_num_(thread_num)
 {
   name_ = manager_name;
+  tasks_.set_capacity(task_limit);
 }
 
 void ThreadManager::Start()
@@ -87,14 +93,7 @@ void ThreadManager::Worker()
   while (running_)
   {
     Task t;
-    {
-      MutexGuard m(&mutex_);
-      if (!tasks_.empty())
-      {
-        t = tasks_.front();
-        tasks_.pop_front();
-      }
-    }
+    tasks_.pop(t);
     if (t.routine_)
     {
       t.routine_(t.arg_);
@@ -115,5 +114,6 @@ ThreadManager::Task::Task(void* arg, task_routine routine):
   arg_(arg), routine_(routine)
 {
 }
-
+}
+}
 #endif // PUBLIC_THREAD_MANAGER_H_
