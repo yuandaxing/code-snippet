@@ -5,9 +5,9 @@
 #include <vector>
 #include <algorithm>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 
 class MutexGuard

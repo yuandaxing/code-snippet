@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <param_repository.h>
-using namespace MicroAd::Utils;
+using namespace micro_ad::utils;
 
 DEFINE_BOOL(enable_whitelist, "false", true, "hello world, this is a test for enable whitelist");
 DECLARE_BOOL(enable_whitelist);
@@ -15,7 +15,7 @@ DECLARE_INT64(int64_whitelist);
 DEFINE_STRING(string_whitelist, "/path/t/a/b", false, "testing for string whitelist");
 DECLARE_STRING(string_whitelist);
 
-using namespace MicroAd::Utils;
+using namespace micro_ad::utils;
 TEST(ParamRepository, Test)
 {
   BOOL_SET(enable_whitelist, "true", ValSrc::COMMAND);

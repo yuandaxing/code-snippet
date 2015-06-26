@@ -1,3 +1,4 @@
+#include <list>
 #include <unistd.h>
 #include <pthread.h>
 #include <iostream>
@@ -138,15 +139,48 @@ void GenerateRandom(vector<int>& vi, int size, int maxV)
   vi.swap(temp);
 }
 
+
+
 int customize_rand( std::size_t k)
 {
-  unsigned int x = 0;
-<<<<<<< HEAD:C++/multithread/product_consume.cc
-  return rand_r() % k;
-=======
-  return rand_r(&x) % k;
->>>>>>> 5deb335f8d2e9e06b65e55cb3ca674b004688cf0:C++/multithread/producer_consumer.cc
+  //  unsigned int x = 0;
+  //return rand_r(&x) % k;
+  return std::rand();
 }
+
+class Random
+{
+public:
+  Random(): seed_(0)
+  {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    seed_ = static_cast<unsigned int>(tv.tv_sec ^ tv.tv_usec);
+  }
+  Random(unsigned int seed):  seed_(seed)
+  {
+  }
+
+  int Next()
+  {
+    return rand_r(&seed_);
+  }
+
+private:
+  unsigned int seed_;
+};
+
+Random rand_;
+
+template <typename Iterator>
+void LockShuffle(Iterator begin, Iterator end)
+{
+  for (std::ptrdiff_t size = end - begin; size != 0; size--)
+  {
+    std::swap(*(begin + size - 1), *(begin + rand_.Next()% size));
+  }
+}
+
 void random(void* data)
 {
   vector<int>& vi = *static_cast<vector<int>* >(data);
@@ -155,7 +189,8 @@ void random(void* data)
   gettimeofday(&start, NULL);
   for(int i = 0; i != rand_count; i++)
   {
-    std::random_shuffle(vi.begin(), vi.end(), customize_rand);
+    //std::random_shuffle(vi.begin(), vi.end());
+    LockShuffle(vi.begin(), vi.end());
     v += vi[0];
   }
   gettimeofday(&end, NULL);

@@ -3,9 +3,9 @@
 #include <param_repository.h>
 #include <ad_common.h>
 #include <sstream>
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 
 int RequestMgr::Process(const char* url, struct MHD_Connection* conn, std::string& result)

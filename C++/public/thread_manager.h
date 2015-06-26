@@ -21,17 +21,18 @@
 namespace micro_ad
 {
 namespace utils
+{
 
 using std::string;
 using std::vector;
 using tbb::concurrent_bounded_queue;
-
 typedef void (*task_routine)(void* arg);
 
 class ThreadManager
 {
 public:
-  ThreadManager(int thread_num, const string& manager_name, const int tasks_limit = 1000000);
+  ThreadManager(int thread_num, const string& manager_name,
+                int task_capacity = 100000);
   void Start();
   void Stop();
   void AddTask(task_routine routine, void* arg);
@@ -60,11 +61,12 @@ private:
   string name_;
 };
 
-ThreadManager::ThreadManager(int thread_num, const string& manager_name, int task_limit) :
+ThreadManager::ThreadManager(int thread_num, const string& manager_name,
+                             int task_capacity) :
   running_(false), thread_num_(thread_num)
 {
   name_ = manager_name;
-  tasks_.set_capacity(task_limit);
+  tasks_.set_capacity(task_capacity);
 }
 
 void ThreadManager::Start()
@@ -85,7 +87,7 @@ void ThreadManager::Stop()
 
 void ThreadManager::AddTask(task_routine routine, void* arg)
 {
-  tasks_.push_back(Task(arg, routine));
+  tasks_.push(Task(arg, routine));
 }
 
 void ThreadManager::Worker()
@@ -114,6 +116,7 @@ ThreadManager::Task::Task(void* arg, task_routine routine):
   arg_(arg), routine_(routine)
 {
 }
+
 }
 }
 #endif // PUBLIC_THREAD_MANAGER_H_

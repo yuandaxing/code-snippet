@@ -2,9 +2,9 @@
 #include <ad_common.h>
 #include <algorithm>
 #include <sstream>
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 
 pthread_mutex_t ParamRepository::lock_ = PTHREAD_MUTEX_INITIALIZER;
