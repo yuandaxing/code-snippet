@@ -5,9 +5,9 @@
 #include <pthread.h>
 #include <ad_common.h>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 enum ParamType {BOOL_T, INT32_T, INT64_T, STRING_T };
 enum ValSrc {DEFAULT, COMMAND, WEB};

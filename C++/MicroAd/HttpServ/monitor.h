@@ -9,16 +9,19 @@
 #include <list>
 #include <tbb/concurrent_hash_map>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+
+namespace utils
 {
+
 class MonitorType
 {
 public:
   virtual void Incr(int64_t v) = 0;
   virtual MonitorType* Create() = 0;
   virtual void Add(MonitorType* mt) = 0;
+  virtual int64_t Value() = 0;
   virtual ~MonitorType(){}
 };
 
@@ -29,48 +32,88 @@ public:
   void Incr(int64_t v);
   MonitorType* Create();
   void Add(MonitorType* mt);
+  int64_t Value();
 private:
   int64_t count_, value_;
 };
 
-class QpsMonitor: public MonitorType
+class CounterMonitor: public MonitorType
 {
 public:
-  QpsMonitor();
+  CounterMonitor();
   virtual void Incr(int64_t v) = 0;
   virtual MonitorType* Create() = 0;
   virtual void Add(MonitorType* mt) = 0;
+  virtual int64_t Value();
 private:
   int64_t count_;
 };
-/**
- * the basic algorithm is to check the current time
- */
-struct Calendar
-{
-  Calendar(MonitorType* mt);
-  static void Resize(list<MonitorType*> list_monitor, std::size_t);
 
-  enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4};
-  MonitorType* cur_[SIZE];
+/**
+ * the basic algorithm is to mimic the clock
+ * push very instant one to the last_xx_xx,
+ * at the same time add to instant one to the cur_hand_
+ * push front, pop back,
+ * for statistics, read from the front
+ * update every 1 second
+ */
+struct ClockMimic
+{
+public:
+  ClockMimic(MonitorType* mt);
+  void Update(struct tm& time_struct);
+  void Incr(int64_t val);
+  ClockMimic(const ClockMimic& other);
+  ~ClockMimic();
+
+private:
+  void operator=(const ClockMimic&);
+  static void Resize(list<MonitorType*> list_monitor, std::size_t);
+  bool IsRewindSecond(struct tm& time_struct);
+  bool IsRewindMin(struct tm& time_struct);
+  bool IsRewindHour(struct tm& time_struct);
+  bool IsRewindDay(struct tm& time_struct);
+  string ToString();
+
+public:
+  enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4 };
+  enum {SECOND_NUM = 60, MINUTE_NUM = 60, HOUR_NUM = 24, DAY_NUM = 10 };
+  int counter_[SIZE];
+  MonitorType* cur_hand_[SIZE], *instant_one_second_;
   list<MonitorType*> last_60_seconds_, last_60_minutes_, last_24_hours_, last_10_days_;
 };
 
 class Monitor
 {
 public:
-  void Incr(const string& key, int64_t val);
-  void InitOrIncr(const string& key, int64_t);
+  enum mon_type {AVERAGE = 0, COUNTER = 1};
+
+  bool Incr(const string& key, int64_t val);
+  bool CreateClock(const string& key, mon_type mt);
+  bool Set(const string& key, const string& val);
+
   void Detail(const string& key, string& content);
   void Summary(string& content);
-  void Set(const string& key, const string& val);
+  static Monitor& Instance();
+
+private:
+  void Update();
+  static void* UpdateWrapper(void* monitor_pointer);
+  Monitor();
+  Monitor(const Monitor&);
+  void operator=(const Monitor&);
 
 private:
   using std::string;
   using tbb:concurrent_hash_map;
 
-  concurrent_hash_map<string, MonitorType*> monitor_data_;
+  static Monitor* instance_;
+  static pthread_mutex_t mutex_;
+  bool is_running_;
+  concurrent_hash_map<string, ClockMimic> monitor_data_;
   concurrent_hash_map<string, string> key_val_;
+  typedef concurrent_hash_map<string, ClockMimic>::accessor clock_iterator;
+  typedef concurrent_hash_map<string, string>::accessor kv_iterator;
 };
 
 }

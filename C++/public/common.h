@@ -1,5 +1,11 @@
-#ifndef MICROAD_UTILS_COMMON_H_
-#define MICROAD_UTILS_COMMON_H_
+/*
+ * author: yuandx
+ * create: 2015-06-18
+ * email: yuandx@mvad.com
+ */
+
+#ifndef PUBLIC_COMMON_H_
+#define PUBLIC_COMMON_H_
 #include <pthread.h>
 #include <string>
 #include <vector>
@@ -132,6 +138,32 @@ static inline bool StartWith(const std::string& l, const std::string& r)
   return l.size() >= r.size() && l.compare(0, r.size(), r) == 0;
 }
 
+class Random
+{
+public:
+  Random();
+  Random(unsigned int seed);
+  int Next();
+private:
+  unsigned int seed_;
+};
+
+Random::Random():
+  seed_(0)
+{
+  struct timeval tv;
+  gettimeofday(tv);
+  seed_ = static_cast<unsigned int>(tv.tv_sec ^ tv.tv_usec);
+}
+Random::Random(unsigned int seed):
+  seed_(seed)
+{
+}
+int Random::Next()
+{
+  return rand_r(&seed_);
+}
+
 }
 }
-#endif
+#endif // PUBLIC_COMMON_H_

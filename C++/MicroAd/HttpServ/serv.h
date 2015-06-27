@@ -7,9 +7,9 @@
 #include <string>
 #include <sys/types.h>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 class IHttpRequestProcessor
 {
@@ -31,11 +31,13 @@ private:
   struct MHD_Daemon* daemon_;
   std::shared_ptr<IHttpRequestProcessor> requestPtr_;
 
+private:
   Serv():daemon_(NULL){}
   static int HttpCallback(void* cls, struct MHD_Connection* connection,
                           const char* url, const char* method,
                           const char* version, const char* upload_data,
                           size_t* upload_data_size, void** ptr);
+
 };
 }
 }

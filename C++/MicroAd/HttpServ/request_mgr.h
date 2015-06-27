@@ -4,9 +4,9 @@
 #include <serv.h>
 #include <microhttpd.h>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 class RequestMgr: public IHttpRequestProcessor
 {

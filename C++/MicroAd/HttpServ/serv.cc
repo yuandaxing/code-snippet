@@ -2,9 +2,9 @@
 #include <iostream>
 #include <functional>
 
-namespace MicroAd
+namespace micro_ad
 {
-namespace Utils
+namespace utils
 {
 Serv* Serv::instance_ = NULL;
 pthread_mutex_t Serv::lock_ = PTHREAD_MUTEX_INITIALIZER;
