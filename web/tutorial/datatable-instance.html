@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start the DataTable</title>
+    <link rel="stylesheet" type="text/css" href="../js/DataTables-1.10.7/media/css/jquery.dataTables.css">
+    <script type="text/javascript" language="javascript" src="../js/DataTables-1.10.7/media/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/DataTables-1.10.7/media/js/jquery.dataTables.js"></script>
+    <script>
+      function Employee ( name, position, salary, office ) {
+      this.name = name;
+      this.position = position;
+      this.salary = salary;
+      this._office = office;
+
+      this.office = function () {
+      return this._office;
+      }
+      };
+
+      $('#table_id').DataTable( {
+      data: [
+      new Employee( "Tiger Nixon", "System Architect", "$3,120", "Edinburgh" ),
+      new Employee( "Garrett Winters", "Director", "$5,300", "Edinburgh" )
+      ],
+      columns: [
+      { data: 'name' },
+      { data: 'salary' },
+      { data: 'position' }
+      ]
+      } );
+
+    </script>
+  </head>
+  <body>
+    <table id="table_id" class="display">
+    </table>
+  </body>
+</html>

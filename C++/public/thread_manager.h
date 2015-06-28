@@ -6,27 +6,21 @@
 
 #ifndef PUBLIC_THREAD_MANAGER_H_
 #define PUBLIC_THREAD_MANAGER_H_
-
-#include <unistd.h>
 #include <pthread.h>
-#include <iostream>
-#include <string>
-#include <vector>
 #include <sys/time.h>
-#include <time.h>
-#include <stdlib.h>
 #include <algorithm>
 #include <tbb/concurrent_queue.h>
+#include <string>
+#include <vector>
 
 namespace micro_ad
 {
 namespace utils
 {
-
-using std::string;
-using std::vector;
 using tbb::concurrent_bounded_queue;
 typedef void (*task_routine)(void* arg);
+using std::string;
+using std::vector;
 
 class ThreadManager
 {
@@ -54,6 +48,7 @@ private:
     Task(void* arg, task_routine routine);
   };
 
+private:
   bool running_;
   const int thread_num_;
   concurrent_bounded_queue<Task> tasks_;
@@ -61,15 +56,14 @@ private:
   string name_;
 };
 
-ThreadManager::ThreadManager(int thread_num, const string& manager_name,
-                             int task_capacity) :
+inline ThreadManager::ThreadManager(int thread_num, const string& manager_name, int task_capacity) :
   running_(false), thread_num_(thread_num)
 {
   name_ = manager_name;
   tasks_.set_capacity(task_capacity);
 }
 
-void ThreadManager::Start()
+inline void ThreadManager::Start()
 {
   running_ = true;
   for (int i = 0; i != thread_num_; ++i)
@@ -80,17 +74,17 @@ void ThreadManager::Start()
   }
 }
 
-void ThreadManager::Stop()
+inline void ThreadManager::Stop()
 {
   running_ = false;
 }
 
-void ThreadManager::AddTask(task_routine routine, void* arg)
+inline void ThreadManager::AddTask(task_routine routine, void* arg)
 {
   tasks_.push(Task(arg, routine));
 }
 
-void ThreadManager::Worker()
+inline void ThreadManager::Worker()
 {
   while (running_)
   {
@@ -103,16 +97,16 @@ void ThreadManager::Worker()
   }
 }
 
-void* ThreadManager::WorkerWrapper(void* arg)
+inline void* ThreadManager::WorkerWrapper(void* arg)
 {
   ThreadManager* tm = static_cast<ThreadManager*>(arg);
   tm->Worker();
 }
-ThreadManager::Task::Task():
+inline ThreadManager::Task::Task():
   arg_(NULL), routine_(NULL)
 {
 }
-ThreadManager::Task::Task(void* arg, task_routine routine):
+inline ThreadManager::Task::Task(void* arg, task_routine routine):
   arg_(arg), routine_(routine)
 {
 }

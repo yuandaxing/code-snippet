@@ -1,8 +1,0 @@
-./request_mgr.cc
-./param_repository.h
-./serv.h
-./serv_ut.cc
-./param_repository.cc
-./ad_common.h
-./request_mgr.h
-./serv.cc

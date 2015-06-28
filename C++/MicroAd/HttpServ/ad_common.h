@@ -129,7 +129,7 @@ static inline std::vector<std::string> Split(const std::string& s, const std::st
 
 static inline bool StartWith(const std::string& l, const std::string& r)
 {
-  return l.size() >= r.size() && l.compare(0, r.size(), r) == 0;
+  return l.compare(0, r.size(), r) == 0;
 }
 
 }

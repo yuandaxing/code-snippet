@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start the DataTable</title>
+    <link rel="stylesheet" type="text/css" href="../js/DataTables-1.10.7/media/css/jquery.dataTables.css">
+    <script type="text/javascript" language="javascript" src="../js/DataTables-1.10.7/media/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="../js/DataTables-1.10.7/media/js/jquery.dataTables.js"></script>
+    <script>
+      $(document).ready( function () {
+      $('#table_id').DataTable(
+      {
+      paging : false,
+      searching: false
+      });
+      } );
+    </script>
+  </head>
+  <body>
+    <table id="table_id" class="display">
+      <thead>
+        <tr>
+          <th> Column 1</th>
+          <th>Column 2</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1 Data 1</td>
+          <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+          <td>Row 2 Data 1</td>
+          <td>Row 2 Data 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

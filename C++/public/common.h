@@ -10,7 +10,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
+#include <sys/time.h>
+#include <cstdint>
 namespace micro_ad
 {
 namespace utils
@@ -135,7 +136,7 @@ static inline std::vector<std::string> Split(const std::string& s, const std::st
 
 static inline bool StartWith(const std::string& l, const std::string& r)
 {
-  return l.size() >= r.size() && l.compare(0, r.size(), r) == 0;
+  return l.compare(0, r.size(), r) == 0;
 }
 
 class Random
@@ -152,7 +153,7 @@ Random::Random():
   seed_(0)
 {
   struct timeval tv;
-  gettimeofday(tv);
+  gettimeofday(&tv, NULL);
   seed_ = static_cast<unsigned int>(tv.tv_sec ^ tv.tv_usec);
 }
 Random::Random(unsigned int seed):
@@ -162,6 +163,13 @@ Random::Random(unsigned int seed):
 int Random::Next()
 {
   return rand_r(&seed_);
+}
+
+int64_t CurrentUSeconds()
+{
+  struct timeval cur;
+  gettimeofday(&cur, NULL);
+  return cur.tv_sec *1000000 + cur.tv_usec;
 }
 
 }
