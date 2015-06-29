@@ -12,11 +12,11 @@
 #include <tbb/concurrent_queue.h>
 #include <string>
 #include <vector>
-
 namespace micro_ad
 {
 namespace utils
 {
+
 using tbb::concurrent_bounded_queue;
 typedef void (*task_routine)(void* arg);
 using std::string;

@@ -3,7 +3,6 @@
  * create: 2015-06-18
  * email: yuandx@mvad.com
  */
-
 #ifndef PUBLIC_COMMON_H_
 #define PUBLIC_COMMON_H_
 #include <pthread.h>
@@ -11,7 +10,7 @@
 #include <vector>
 #include <algorithm>
 #include <sys/time.h>
-#include <cstdint>
+#include <stdint.h>
 namespace micro_ad
 {
 namespace utils
@@ -85,21 +84,21 @@ private:
  */
 
 
-static inline std::string ToLower(const std::string& str)
+inline std::string ToLower(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::tolower);
   return ret;
 }
 
-static inline std::string ToUpper(const std::string& str)
+inline std::string ToUpper(const std::string& str)
 {
   std::string ret(str);
   std::transform(ret.begin(), ret.end(), ret.begin(), ::toupper);
   return ret;
 }
 
-static inline std::string Join(const std::vector<std::string>& strs, const std::string& sep)
+inline std::string Join(const std::vector<std::string>& strs, const std::string& sep)
 {
   std::string ret;
   if(strs.size() < 1)
@@ -115,7 +114,7 @@ static inline std::string Join(const std::vector<std::string>& strs, const std::
   return ret;
 }
 
-static inline std::vector<std::string> Split(const std::string& s, const std::string& delim)
+inline std::vector<std::string> Split(const std::string& s, const std::string& delim)
 {
   std::vector<std::string> ret;
   size_t last = 0, index = s.find_first_of(delim, last);
@@ -134,7 +133,7 @@ static inline std::vector<std::string> Split(const std::string& s, const std::st
   return ret;
 }
 
-static inline bool StartWith(const std::string& l, const std::string& r)
+inline bool StartWith(const std::string& l, const std::string& r)
 {
   return l.compare(0, r.size(), r) == 0;
 }
@@ -145,31 +144,42 @@ public:
   Random();
   Random(unsigned int seed);
   int Next();
+
 private:
   unsigned int seed_;
 };
 
-Random::Random():
+inline Random::Random():
   seed_(0)
 {
   struct timeval tv;
   gettimeofday(&tv, NULL);
   seed_ = static_cast<unsigned int>(tv.tv_sec ^ tv.tv_usec);
 }
-Random::Random(unsigned int seed):
+inline Random::Random(unsigned int seed):
   seed_(seed)
 {
 }
-int Random::Next()
+inline int Random::Next()
 {
   return rand_r(&seed_);
 }
 
-int64_t CurrentUSeconds()
+inline int64_t CurrentUSeconds()
 {
   struct timeval cur;
   gettimeofday(&cur, NULL);
   return cur.tv_sec *1000000 + cur.tv_usec;
+}
+
+template <typename Iterator>
+void LockFreeShuffle(Iterator begin, Iterator end)
+{
+  Random rand_;
+  for (std::ptrdiff_t size = end - begin; size != 0; size--)
+  {
+    std::swap(*(begin + size - 1), *(begin + rand_.Next() % size));
+  }
 }
 
 }

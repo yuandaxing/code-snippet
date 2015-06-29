@@ -1,6 +1,7 @@
 //g++ test.cc  -lpthread -ltbb
 #include "../common.h"
 #include "../thread_manager.h"
+#include "gtest/gtest.h"
 #include <iostream>
 #include <vector>
 
@@ -42,8 +43,17 @@ int main(int argc, char *argv[])
   ThreadManager tm(1, "hello");
   tm.AddTask(SumVec, &tmp);
   tm.Start();
-  sleep(20);
   tm.Stop();
-
+  string a1 = "abceDFg";
+  EXPECT_EQ(string("abcedfg"), ToLower(a1));
+  const char *a[4] = {"aaa", "bbb", "ccc", "ddd"};
+  vector<string> vstring(a, a+sizeof(a)/sizeof(*a));
+  EXPECT_EQ(string("aaatbbbtccctddd"), Join(vstring, "t"));
+  vector<string> splits = Split("aaatbbbtccctddd", "t");
+  EXPECT_EQ(splits.size(), 4);
+  EXPECT_TRUE(StartWith("", ""));
+  EXPECT_TRUE(StartWith("aab", "a"));
+  EXPECT_FALSE(StartWith("aa", "aab"));
+  sleep(20);
   return 0;
 }
