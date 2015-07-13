@@ -71,6 +71,7 @@ public:
   void Update(struct tm& time_struct);
   void Incr(int64_t val);
   ~ClockMimic();
+  string ToString();
 
 private:
   static void Resize(list<MonitorType*> list_monitor, std::size_t);
@@ -78,7 +79,6 @@ private:
   bool IsRewindMin(struct tm& time_struct);
   bool IsRewindHour(struct tm& time_struct);
   bool IsRewindDay(struct tm& time_struct);
-  string ToString();
 
 public:
   enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4 };
@@ -92,7 +92,6 @@ class Monitor
 {
 public:
   enum mon_type {AVERAGE = 0, COUNTER = 1};
-
   bool Incr(const string& key, int64_t val);
   bool CreateClock(const string& key, mon_type mt);
   bool Set(const string& key, const string& val);
@@ -104,6 +103,7 @@ private:
   void Update();
   static void* UpdateWrapper(void* monitor_pointer);
   Monitor();
+  //no copy
   Monitor(const Monitor&);
   void operator=(const Monitor&);
 
@@ -116,7 +116,6 @@ private:
   typedef concurrent_hash_map<string, ClockMimic>::accessor clock_iterator;
   typedef concurrent_hash_map<string, string>::accessor kv_iterator;
 };
-
 }
 }
 
