@@ -92,7 +92,6 @@ class Monitor
 {
 public:
   enum mon_type {AVERAGE = 0, COUNTER = 1};
-
   bool Incr(const string& key, int64_t val);
   bool CreateClock(const string& key, mon_type mt);
   bool Set(const string& key, const string& val);
@@ -116,7 +115,6 @@ private:
   typedef concurrent_hash_map<string, ClockMimic>::accessor clock_iterator;
   typedef concurrent_hash_map<string, string>::accessor kv_iterator;
 };
-
 }
 }
 

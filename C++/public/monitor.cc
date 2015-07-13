@@ -1,8 +1,8 @@
 #include "monitor.h"
 #include "common.h"
-
 #include <sys/time.h>
 #include <stdio.h>
+using std::runtime_error;
 
 namespace micro_ad
 {
@@ -30,7 +30,7 @@ void AverageMonitor::Add(MonitorType *mt)
   AverageMonitor* am = dynamic_cast<AverageMonitor*>(mt);
   if (NULL == am)
   {
-    throw std::runtime_error("not AverageMonitor type");
+    throw runtime_error("not AverageMonitor type");
   }
   count_ += am->count_;
   value_ += am->value_;
@@ -59,7 +59,7 @@ void CounterMonitor::Add(MonitorType *mt)
   CounterMonitor* qm = dynamic_cast<CounterMonitor*>(mt);
   if (NULL == qm)
   {
-    throw std::runtime_error("not CounterMonitor type");
+    throw runtime_error("not CounterMonitor type");
   }
   count_ += qm->count_;
 }
@@ -73,8 +73,9 @@ ClockMimic::ClockMimic(MonitorType* mt)
 {
   if (NULL == mt)
   {
-    throw std::runtime_error("monitorType NULL");
+    throw runtime_error("monitorType NULL");
   }
+
   for (std::size_t i = 0; i != SIZE; ++i)
   {
     cur_hand_[i] = mt->Create();
@@ -97,6 +98,7 @@ ClockMimic::ClockMimic():instant_one_second_(NULL)
     counter_[i] = 0;
   }
 }
+
 void ClockMimic::Resize(list<MonitorType*> list_monitor, std::size_t size)
 {
   while (list_monitor.size() > size)
@@ -127,7 +129,7 @@ bool ClockMimic::IsRewindDay(struct tm& time_struct)
 /*
  * sleep at least one seconds
  */
-void ClockMimic::Update(tm& time_struct)
+void ClockMimic::Update(struct tm& time_struct)
 {
   MonitorType* cur_monitor = instant_one_second_;
 
