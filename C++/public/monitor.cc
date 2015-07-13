@@ -2,6 +2,8 @@
 #include "common.h"
 #include <sys/time.h>
 #include <stdio.h>
+#include <iostream>
+using std::cout;
 using std::runtime_error;
 
 namespace micro_ad
@@ -113,6 +115,7 @@ bool ClockMimic::IsRewindSecond(struct tm& time_struct)
 {
   return counter_[SECOND] > time_struct.tm_sec;
 }
+
 bool ClockMimic::IsRewindMin(struct tm& time_struct)
 {
   return counter_[MINUTE] > time_struct.tm_min;
@@ -132,10 +135,9 @@ bool ClockMimic::IsRewindDay(struct tm& time_struct)
 void ClockMimic::Update(struct tm& time_struct)
 {
   MonitorType* cur_monitor = instant_one_second_;
-
   cur_hand_[SECOND]->Add(cur_monitor);
-  last_60_seconds_.push_back(cur_monitor);
-  Resize(last_60_seconds_, 60);
+  last_60_seconds_.push_front(cur_monitor);
+  Resize(last_60_seconds_, SECOND_NUM);
   instant_one_second_ = cur_monitor->Create();
 
   if (IsRewindSecond(time_struct))
@@ -179,15 +181,10 @@ const int LINE_COUNT = 10;
 string ListFormat(list<MonitorType*> list_mt)
 {
   char buffer[BUFF_SIZE] = {0};
-  int pos = 0, count = 0;
+  int pos = 0;
   for (list<MonitorType*>::iterator it = list_mt.begin(); it != list_mt.end(); ++it)
   {
-    pos += snprintf(buffer, BUFF_SIZE - pos, "%ld ", (*it)->Value());
-    count++;
-    if (count % LINE_COUNT == 0)
-    {
-      pos += snprintf(buffer, BUFF_SIZE - pos, "<br>");
-    }
+    pos += snprintf(buffer + pos, BUFF_SIZE - pos, "%ld ", (*it)->Value());
   }
   return string(buffer);
 }
@@ -197,15 +194,19 @@ string ClockMimic::ToString()
   string result;
   result.append("last_60_seconds:");
   result.append(ListFormat(last_60_seconds_));
-  result.append("<br>");
+  result.append("\n");
   result.append("last_60_minutes:");
   result.append(ListFormat(last_60_minutes_));
+  result.append("\n");
   result.append("last_24_hours:");
   result.append(ListFormat(last_24_hours_));
+  result.append("\n");
   result.append("last_10_days:");
   result.append(ListFormat(last_10_days_));
+  result.append("\n");
   return result;
 }
+
 void ClearMonitorList(list<MonitorType*> list_mt)
 {
   while (!list_mt.empty())
@@ -237,39 +238,34 @@ void CopyMonitorList(const list<MonitorType*>& src, list<MonitorType*>& dest)
     dest.push_back(r);
   }
 }
+
 ClockMimic::ClockMimic(const ClockMimic& other)
 {
-  for (int i = 0; i != SIZE; i++)
-  {
-    counter_[i] = other.counter_[i];
-    MonitorType* mt = (other.cur_hand_[i])->Create();
-    mt->Add(other.cur_hand_[i]);
-    cur_hand_[i] = mt;
-  }
-  MonitorType* mt = (other.instant_one_second_)->Create();
-  mt->Add(other.instant_one_second_);
-  instant_one_second_ = mt;
-  CopyMonitorList(other.last_60_seconds_, last_60_seconds_);
-  CopyMonitorList(other.last_60_minutes_, last_60_minutes_);
-  CopyMonitorList(other.last_24_hours_, last_24_hours_);
-  CopyMonitorList(other.last_10_days_, last_10_days_);
+  operator=(other);
 }
+
 void ClockMimic::operator=(const ClockMimic& other)
 {
  for (int i = 0; i != SIZE; i++)
   {
     counter_[i] = other.counter_[i];
-    MonitorType* mt = (other.cur_hand_[i])->Create();
-    mt->Add(other.cur_hand_[i]);
-    cur_hand_[i] = mt;
+    if (NULL != other.cur_hand_[i])
+    {
+      MonitorType* mt = (other.cur_hand_[i])->Create();
+      mt->Add(other.cur_hand_[i]);
+      cur_hand_[i] = mt;
+    }
   }
-  MonitorType* mt = (other.instant_one_second_)->Create();
-  mt->Add(other.instant_one_second_);
-  instant_one_second_ = mt;
-  CopyMonitorList(other.last_60_seconds_, last_60_seconds_);
-  CopyMonitorList(other.last_60_minutes_, last_60_minutes_);
-  CopyMonitorList(other.last_24_hours_, last_24_hours_);
-  CopyMonitorList(other.last_10_days_, last_10_days_);
+ if (NULL != other.instant_one_second_)
+ {
+   MonitorType* mt = (other.instant_one_second_)->Create();
+   mt->Add(other.instant_one_second_);
+   instant_one_second_ = mt;
+   CopyMonitorList(other.last_60_seconds_, last_60_seconds_);
+   CopyMonitorList(other.last_60_minutes_, last_60_minutes_);
+   CopyMonitorList(other.last_24_hours_, last_24_hours_);
+   CopyMonitorList(other.last_10_days_, last_10_days_);
+ }
 }
 
 Monitor* Monitor::instance_ = NULL;
@@ -333,6 +329,7 @@ bool Monitor::Set(const string& key, const string& val)
 int32_t USECONDS = 1000000;
 void Monitor::Update()
 {
+  int count = 0;
   while (is_running_)
   {
     usleep(1000000);
@@ -344,6 +341,15 @@ void Monitor::Update()
     {
       ci->second.Update(time_struct);
     }
+#ifdef MONITOR_DEMO
+    count++;
+    if (count % 10 == 0)
+    {
+      string content;
+      Summary(content);
+      cout << content << std::endl;
+    }
+#endif
   }
 }
 
@@ -351,6 +357,28 @@ void* Monitor::UpdateWrapper(void* monitor_pointer)
 {
   Monitor* m = static_cast<Monitor*>(monitor_pointer);
   m->Update();
+  return NULL;
 }
+
+void Monitor::Summary(string& content)
+{
+  for (concurrent_hash_map<string, ClockMimic>::iterator ci = monitor_data_.begin();
+       ci != monitor_data_.end(); ++ci)
+  {
+    content.append(ci->first + ":\n");
+    content.append((ci->second).ToString());
+    content.append("\n\n");
+  }
+  content.append("--------------------------------------------------------\n");
+  for (concurrent_hash_map<string, string>::iterator it = key_val_.begin();
+       it != key_val_.end(); ++it)
+  {
+    content.append(it->first + ": ");
+    content.append(it->second);
+    content.append("\n\n");
+  }
+  content.append("-------------------------------------------------------\n");
+}
+
 }
 }

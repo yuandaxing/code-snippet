@@ -71,6 +71,7 @@ public:
   void Update(struct tm& time_struct);
   void Incr(int64_t val);
   ~ClockMimic();
+  string ToString();
 
 private:
   static void Resize(list<MonitorType*> list_monitor, std::size_t);
@@ -78,7 +79,6 @@ private:
   bool IsRewindMin(struct tm& time_struct);
   bool IsRewindHour(struct tm& time_struct);
   bool IsRewindDay(struct tm& time_struct);
-  string ToString();
 
 public:
   enum {SECOND = 0, MINUTE = 1, HOUR = 2, DAY = 3, SIZE = 4 };
@@ -103,6 +103,7 @@ private:
   void Update();
   static void* UpdateWrapper(void* monitor_pointer);
   Monitor();
+  //no copy
   Monitor(const Monitor&);
   void operator=(const Monitor&);
 
