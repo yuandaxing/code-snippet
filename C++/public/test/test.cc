@@ -50,6 +50,11 @@ int main(int argc, char *argv[])
   vector<string> vstring(a, a+sizeof(a)/sizeof(*a));
   EXPECT_EQ(string("aaatbbbtccctddd"), Join(vstring, "t"));
   vector<string> splits = Split("aaatbbbtccctddd", "t");
+  for (int i = 0; i != splits.size(); i++)
+  {
+    std::cout << splits[i] << "\t";
+  }
+  std::cout << std::endl;
   EXPECT_EQ(splits.size(), 4);
   EXPECT_TRUE(StartWith("", ""));
   EXPECT_TRUE(StartWith("aab", "a"));

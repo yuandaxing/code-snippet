@@ -7,6 +7,7 @@
 #define PUBLIC_COMMON_H_
 #include <pthread.h>
 #include <string>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <sys/time.h>
@@ -117,19 +118,13 @@ inline std::string Join(const std::vector<std::string>& strs, const std::string&
 inline std::vector<std::string> Split(const std::string& s, const std::string& delim)
 {
   std::vector<std::string> ret;
-  size_t last = 0, index = s.find_first_of(delim, last);
-
-  while (index != std::string::npos)
+  int start = 0, next = 0;
+  do
   {
-    ret.push_back(s.substr(last, index - last));
-    last = index + 1;
-    index = s.find_first_of(delim, last);
-  }
-
-  if (index - last > 0)
-  {
-    ret.push_back(s.substr(last, index - last));
-  }
+    next = s.find_first_of(delim, start);
+    ret.push_back(s.substr(start, next - start));
+    start = next + 1;
+  } while (next != std::string::npos);
   return ret;
 }
 
